@@ -1,15 +1,23 @@
 import React from "react";
 import Card from "../Components/Card";
 import AddBudget from "../Components/contexts/AddBudget";
-import { useBudgets } from "../Components/contexts/BudgetCont";
+import {
+  useBudgets,
+  UNCATEGORIZED_BUDGET_ID,
+} from "../Components/contexts/BudgetCont";
 import AddExpense from "../Components/contexts/AddExpense";
+import UncategorizedBudgetCard from "../Components/UncategorizedBudgetCard";
+import ViewExpense from "../Components/contexts/ViewExpense";
+import TotalCard from "../Components/TotalCard";
 export default function InfoPage() {
   const [Btn, setBtn] = React.useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = React.useState(false);
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] =
     React.useState();
+  const [viewExpensesModalBudgetId, setViewExpensesModalBudgetId] =
+    React.useState();
   const { budgets, getBudgetExpenses }: any = useBudgets();
-
+  const UncategorizedId: any = UNCATEGORIZED_BUDGET_ID;
   function openAddExpenseModal(budgetId: any) {
     setShowAddExpenseModal(true);
     setAddExpenseModalBudgetId(budgetId);
@@ -27,12 +35,7 @@ export default function InfoPage() {
           >
             Add Budget
           </button>
-          <button
-            className="border-2 mr-4"
-            onClick={() => {
-              openAddExpenseModal;
-            }}
-          >
+          <button className="border-2 mr-4" onClick={openAddExpenseModal}>
             Add Expense
           </button>
         </div>
@@ -57,9 +60,16 @@ export default function InfoPage() {
                 money={money}
                 max_money={budget.max}
                 AddExOnCard={() => openAddExpenseModal(budget.id)}
+                ViewExpense={() => setViewExpensesModalBudgetId(budget.id)}
+                hideBtn=""
               />
             );
           })}
+          <UncategorizedBudgetCard
+            AddExOnCard={openAddExpenseModal}
+            ViewExpense={() => setViewExpensesModalBudgetId(UncategorizedId)}
+          />
+          <TotalCard />
         </div>
       </div>
 
@@ -68,6 +78,10 @@ export default function InfoPage() {
         show={showAddExpenseModal}
         defaultBudgetId={addExpenseModalBudgetId}
         handleClose={() => setShowAddExpenseModal(false)}
+      />
+      <ViewExpense
+        budgetId={viewExpensesModalBudgetId}
+        handleClose={() => setViewExpensesModalBudgetId(undefined)}
       />
     </>
   );

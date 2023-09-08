@@ -5,6 +5,8 @@ interface budg {
   max_money: number;
   bg: string;
   AddExOnCard: any;
+  ViewExpense: any;
+  hideBtn: any;
 }
 
 export default function Card(prop: budg) {
@@ -24,31 +26,39 @@ export default function Card(prop: budg) {
         <h1 className="me-2">{prop.name}</h1>
         <div className="flex items-baseline">
           {Currency.format(prop.money)}
-          <span className="text-black/50 text-xs ms-1">
-            / {Currency.format(prop.max_money)}
-          </span>
+          {prop.max_money && (
+            <span className="text-black/50 text-xs ms-1">
+              / {Currency.format(prop.max_money)}
+            </span>
+          )}
         </div>
       </div>
 
-      <div
-        className={`w-full bg-gray-200 rounded-full h-2.5 mb-4 overflow-hidden`}
-      >
+      {prop.max_money && (
         <div
-          className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${progressPar(
-            prop.money,
-            prop.max_money
-          )}`}
-          style={{
-            width: `${(prop.money / prop.max_money) * 100}%`,
-          }}
-        ></div>
-      </div>
-      <div className="my-3 flex justify-end">
-        <button className="border-2 mr-1" onClick={prop.AddExOnCard}>
-          Add Expense
-        </button>
-        <button className="border-2 mr-1">View Expense</button>
-      </div>
+          className={`w-full bg-gray-200 rounded-full h-2.5 mb-4 overflow-hidden`}
+        >
+          <div
+            className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${progressPar(
+              prop.money,
+              prop.max_money
+            )}`}
+            style={{
+              width: `${(prop.money / prop.max_money) * 100}%`,
+            }}
+          ></div>
+        </div>
+      )}
+      {!prop.hideBtn && (
+        <div className="my-3 flex justify-end">
+          <button className="border-2 mr-1" onClick={prop.AddExOnCard}>
+            Add Expense
+          </button>
+          <button className="border-2 mr-1" onClick={prop.ViewExpense}>
+            View Expense
+          </button>
+        </div>
+      )}
     </div>
   );
 }

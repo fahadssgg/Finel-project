@@ -5,18 +5,7 @@ const BudgetCont = React.createContext({});
 export function useBudgets() {
   return React.useContext(BudgetCont);
 }
-interface Budget {
-  id: string;
-  name: string;
-  max: number;
-}
 
-interface Expense {
-  id: string;
-  description: string;
-  amount: number;
-  budgetId: string;
-}
 export const UNCATEGORIZED_BUDGET_ID = "Uncategorized";
 
 // {
@@ -52,16 +41,20 @@ export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
       return [...prevBudgets, { id: uuidv4(), name, max }];
     });
   }
-  function deleteBudget(id: string) {
+  function deleteBudget({ id }: any) {
+    setExpenses((prevExpenses: any) => {
+      return prevExpenses.map((expense: any) => {
+        if (expense.budgetId !== id) return expense;
+        return { ...expense, budgetId: UNCATEGORIZED_BUDGET_ID };
+      });
+    });
     setBudgets((prevBudgets: any[]) => {
       return prevBudgets.filter((budget: { id: string }) => budget.id !== id);
     });
   }
-  function deleteExpense(id: string) {
-    setBudgets((prevExpenses: any[]) => {
-      return prevExpenses.filter(
-        (expenses: { id: string }) => expenses.id !== id
-      );
+  function deleteExpense({ id }: any) {
+    setExpenses((prevExpenses: any) => {
+      return prevExpenses.filter((expenses: any) => expenses.id !== id);
     });
   }
 

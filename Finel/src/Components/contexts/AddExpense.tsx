@@ -7,16 +7,16 @@ export default function AddExpense({
 }: any) {
   const descriptionRef = useRef<HTMLInputElement | null>(null);
   const moneyRef = useRef<HTMLInputElement | null>(null);
-  const budgetIdRef = useRef<HTMLInputElement | null>(null);
+  const budgetIdRef = useRef<HTMLSelectElement | null>(null);
   const { addExpenses, budgets }: any = useBudgets();
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (descriptionRef.current && moneyRef.current && budgetIdRef.current) {
-      const discription = descriptionRef.current.value;
+      const description = descriptionRef.current.value;
       const money = parseFloat(moneyRef.current.value);
       const budgetId = budgetIdRef.current.value;
 
-      addExpenses(discription, money, budgetId);
+      addExpenses(description, money, budgetId);
 
       // Clear the input fields
       descriptionRef.current.value = "";
@@ -54,9 +54,9 @@ export default function AddExpense({
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
                     />
                   </svg>
