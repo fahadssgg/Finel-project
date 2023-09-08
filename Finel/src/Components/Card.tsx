@@ -1,0 +1,54 @@
+import { Currency } from "./Intlinfo";
+interface budg {
+  name: string;
+  money: number;
+  max_money: number;
+  bg: string;
+  AddExOnCard: any;
+}
+
+export default function Card(prop: budg) {
+  const classNames = [];
+  if (prop.money > prop.max_money) {
+    classNames.push("bg-red-600/60");
+  }
+  function progressPar(money: number, max_money: number) {
+    const progress = money / max_money;
+    if (progress < 0.5) return "bg-green-600 ";
+    if (progress < 0.75) return "bg-yellow-400 ";
+    return "bg-red-600";
+  }
+  return (
+    <div className={`mt-4 border-4 px-2 py-1 ${classNames.join(" ")}`}>
+      <div className="flex justify-between items-baseline ">
+        <h1 className="me-2">{prop.name}</h1>
+        <div className="flex items-baseline">
+          {Currency.format(prop.money)}
+          <span className="text-black/50 text-xs ms-1">
+            / {Currency.format(prop.max_money)}
+          </span>
+        </div>
+      </div>
+
+      <div
+        className={`w-full bg-gray-200 rounded-full h-2.5 mb-4 overflow-hidden`}
+      >
+        <div
+          className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${progressPar(
+            prop.money,
+            prop.max_money
+          )}`}
+          style={{
+            width: `${(prop.money / prop.max_money) * 100}%`,
+          }}
+        ></div>
+      </div>
+      <div className="my-3 flex justify-end">
+        <button className="border-2 mr-1" onClick={prop.AddExOnCard}>
+          Add Expense
+        </button>
+        <button className="border-2 mr-1">View Expense</button>
+      </div>
+    </div>
+  );
+}
