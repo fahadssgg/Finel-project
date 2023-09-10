@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useBudgets, UNCATEGORIZED_BUDGET_ID } from "./BudgetCont";
+import { useBudgets } from "./BudgetCont";
 export default function AddExpense({
   show,
   handleClose,
