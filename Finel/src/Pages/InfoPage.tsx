@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Components/Card";
+import SidePar from "../Components/SidePar";
 import AddBudget from "../Components/contexts/AddBudget";
 import {
   useBudgets,
@@ -24,51 +25,60 @@ export default function InfoPage() {
   }
   return (
     <>
-      <div className="my-4">
-        <div className="flex">
-          <h1 className="me-auto text-2xl">Budgets</h1>
-        </div>
-        <TotalCard />
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))",
-            gap: "1rem",
-            alignItems: "flex-start",
-          }}
-        >
-          {budgets.map((budget: any) => {
-            const money = getBudgetExpenses(budget.id).reduce(
-              (total: number, expense: any) => total + expense.amount,
-              0
-            );
-            return (
-              <Card
-                key={budget.id}
-                bg=""
-                name={budget.name}
-                money={money}
-                max_money={budget.max}
-                AddExOnCard={() => openAddExpenseModal(budget.id)}
-                ViewExpense={() => setViewExpensesModalBudgetId(budget.id)}
-                hideBtn=""
+      <div className="bg-[#d9d9d9] bg-opacity-30  bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-cover">
+        <div className=" grid grid-cols-5  h-screen">
+          <div className="  h-screen ">
+            <SidePar />
+          </div>
+          <div className=" h-screen col-start-2 col-end-6 ml-4 overflow-auto">
+            <div className="flex">
+              <h1 className="me-auto text-2xl">Budgets</h1>
+            </div>
+            <TotalCard />
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))",
+                gap: "1rem",
+                alignItems: "flex-start",
+              }}
+            >
+              {budgets.map((budget: any) => {
+                const money = getBudgetExpenses(budget.id).reduce(
+                  (total: number, expense: any) => total + expense.amount,
+                  0
+                );
+                return (
+                  <Card
+                    key={budget.id}
+                    bg=""
+                    name={budget.name}
+                    money={money}
+                    max_money={budget.max}
+                    AddExOnCard={() => openAddExpenseModal(budget.id)}
+                    ViewExpense={() => setViewExpensesModalBudgetId(budget.id)}
+                    hideBtn=""
+                  />
+                );
+              })}
+              <UncategorizedBudgetCard
+                AddExOnCard={openAddExpenseModal}
+                ViewExpense={() =>
+                  setViewExpensesModalBudgetId(UncategorizedId)
+                }
               />
-            );
-          })}
-          <UncategorizedBudgetCard
-            AddExOnCard={openAddExpenseModal}
-            ViewExpense={() => setViewExpensesModalBudgetId(UncategorizedId)}
-          />
-        </div>
-        <div className="flex justify-center ">
-          <button
-            className="border-2  m-10"
-            onClick={() => {
-              setBtn(true);
-            }}
-          >
-            Add Budget
-          </button>
+            </div>
+            <div className="flex justify-center ">
+              <button
+                className="border-2  m-10"
+                onClick={() => {
+                  setBtn(true);
+                }}
+              >
+                Add Budget
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
