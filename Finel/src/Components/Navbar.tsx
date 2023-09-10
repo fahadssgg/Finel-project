@@ -27,7 +27,7 @@ export default function NavPar() {
       </ul>
     )}
     
-    {!active && (
+    {(!active || active==="false") && (
       <ul className=" text-white flex justify-between py-4 text-xl cursor-pointer">
         <div className="flex ml-20">
 

@@ -27,7 +27,7 @@ export default function LogIn() {
 
       if (User) {
         setLoggedIn(true);
-        nav("/");
+        nav("/S");
       } else {
         seterror("Invalid must be filled")
 
