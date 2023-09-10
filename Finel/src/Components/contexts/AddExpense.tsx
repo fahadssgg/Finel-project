@@ -90,11 +90,10 @@ export default function AddExpense({
                   />
                 </div>
 
-                <div className="p-6 " id="budgetId">
+                <div className="p-6 hidden" id="budgetId">
                   <label>Budget: </label>
                   <br />
                   <select ref={budgetIdRef} defaultValue={defaultBudgetId}>
-                    <option id={UNCATEGORIZED_BUDGET_ID}>Uncategorized</option>
                     {budgets.map((budget: any) => (
                       <option key={budget.id} value={budget.id}>
                         {budget.name}

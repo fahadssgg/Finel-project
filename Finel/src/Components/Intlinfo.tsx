@@ -1,5 +1,5 @@
 export const Currency = new Intl.NumberFormat(undefined, {
-  currency: "USD",
+  currency: "SAR",
   style: "currency",
   minimumFractionDigits: 0,
 });

@@ -1,7 +1,11 @@
 import { useBudgets } from "./contexts/BudgetCont";
 import { Currency } from "./Intlinfo";
+import { useEffect, useState } from "react";
+import CustomAlert from "./CustomAlert";
 
 export default function TotalCard() {
+  const [showAlert, setShowAlert] = useState(false);
+
   function progressPar(money: number, max_money: number) {
     const progress = money / max_money;
     if (progress < 0.5) return "bg-green-600 ";
@@ -10,21 +14,28 @@ export default function TotalCard() {
   }
 
   ////////////////////////////////////////////////////////
-  const { expenses, budgets }: any = useBudgets();
-  const money = expenses.reduce(
-    (total: number, expense: any) => total + expense.amount,
-    0
-  );
+  const { budgets }: any = useBudgets();
+
   const max = budgets.reduce(
     (total: number, budgets: any) => total + budgets.max,
     0
   );
-  if (max == 0) return null;
+
+  const total: any = localStorage.getItem("rest");
   ////////////////////////////////////////////////
   const classNames = [];
-  if (money > max) {
+  if (max > total) {
     classNames.push("bg-red-600/60");
   }
+  //////////////////////////////////////////////////////
+  useEffect(() => {
+    // Show a custom alert when money exceeds max_money
+    if (max > total) {
+      setShowAlert(true);
+    } else {
+      setShowAlert(false); // Close the alert when money is within the limit
+    }
+  }, [max, total]);
   return (
     <div
       className={`mt-4 mx-10 pb-10 border-4 px-2 py-1 ${classNames.join(" ")}`}
@@ -32,28 +43,32 @@ export default function TotalCard() {
       <div className="flex justify-between items-baseline ">
         <h1 className="me-2">Total</h1>
         <div className="flex items-baseline">
-          {Currency.format(money)}
-          {max && (
+          {Currency.format(max)}
+          {total && (
             <span className="text-black/50 text-xs ms-1">
-              / {Currency.format(max)}
+              / {Currency.format(total)}
             </span>
           )}
         </div>
       </div>
-
-      {max && (
+      {total && (
         <div
           className={`w-full bg-gray-200 rounded-full h-2.5  overflow-hidden mt-5`}
         >
           <div
             className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${progressPar(
-              money,
-              max
+              max,
+              total
             )}`}
             style={{
-              width: `${(money / max) * 100}%`,
+              width: `${(max / total) * 100}%`,
             }}
           ></div>
+        </div>
+      )}{" "}
+      {showAlert && (
+        <div className="mt-2">
+          <CustomAlert message={`Total budget has exceeded its limit!`} />
         </div>
       )}
     </div>

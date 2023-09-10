@@ -5,15 +5,17 @@ import Home from "./Pages/Home";
 import Login from "./Hooks/LogIn";
 import Signup from "./Hooks/SignUp";
 import Profile from "./Pages/Profile";
+import Salary from "./Pages/Salary";
 function App() {
   return (
     <>
       <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/LogIn" element={<Login />}></Route>
-      <Route path="/SignUp" element={<Signup />}></Route>
-      <Route path="/Profile" element={<Profile />}></Route>
-      <Route path="/InfoPage" element={<InfoPage />}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/LogIn" element={<Login />}></Route>
+        <Route path="/SignUp" element={<Signup />}></Route>
+        <Route path="/Profile" element={<Profile />}></Route>
+        <Route path="/InfoPage" element={<InfoPage />}></Route>
+        <Route path="/Salary" element={<Salary />}></Route>
       </Routes>
     </>
   );

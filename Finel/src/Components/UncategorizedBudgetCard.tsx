@@ -8,5 +8,6 @@ export default function UncategorizedBudgetCard(props: any) {
     0
   );
   if (money == 0) return null;
+
   return <Card name="Uncategorized" money={money} {...props} />;
 }

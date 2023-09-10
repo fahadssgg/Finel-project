@@ -27,17 +27,6 @@ export default function InfoPage() {
       <div className="my-4">
         <div className="flex">
           <h1 className="me-auto text-2xl">Budgets</h1>
-          <button
-            className="border-2 mr-4"
-            onClick={() => {
-              setBtn(true);
-            }}
-          >
-            Add Budget
-          </button>
-          <button className="border-2 mr-4" onClick={openAddExpenseModal}>
-            Add Expense
-          </button>
         </div>
         <TotalCard />
         <div
@@ -70,6 +59,16 @@ export default function InfoPage() {
             AddExOnCard={openAddExpenseModal}
             ViewExpense={() => setViewExpensesModalBudgetId(UncategorizedId)}
           />
+        </div>
+        <div className="flex justify-center ">
+          <button
+            className="border-2  m-10"
+            onClick={() => {
+              setBtn(true);
+            }}
+          >
+            Add Budget
+          </button>
         </div>
       </div>
 
