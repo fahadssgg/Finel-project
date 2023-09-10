@@ -1,4 +1,6 @@
 import { Currency } from "./Intlinfo";
+import CustomAlert from "./CustomAlert";
+import { useEffect, useState } from "react";
 interface budg {
   name: string;
   money: number;
@@ -10,6 +12,16 @@ interface budg {
 }
 
 export default function Card(prop: budg) {
+  const [showAlert, setShowAlert] = useState(false);
+
+  useEffect(() => {
+    // Show a custom alert when money exceeds max_money
+    if (prop.money > prop.max_money) {
+      setShowAlert(true);
+    } else {
+      setShowAlert(false); // Close the alert when money is within the limit
+    }
+  }, [prop.money, prop.max_money, prop.name]);
   const classNames = [];
   if (prop.money > prop.max_money) {
     classNames.push("bg-red-600/60");
@@ -57,6 +69,13 @@ export default function Card(prop: budg) {
           <button className="border-2 mr-1" onClick={prop.ViewExpense}>
             View Expense
           </button>
+        </div>
+      )}
+      {showAlert && (
+        <div className="mt-2">
+          <CustomAlert
+            message={`${prop.name} budget has exceeded its limit!`}
+          />
         </div>
       )}
     </div>

@@ -39,6 +39,7 @@ export default function InfoPage() {
             Add Expense
           </button>
         </div>
+        <TotalCard />
         <div
           style={{
             display: "grid",
@@ -69,7 +70,6 @@ export default function InfoPage() {
             AddExOnCard={openAddExpenseModal}
             ViewExpense={() => setViewExpensesModalBudgetId(UncategorizedId)}
           />
-          <TotalCard />
         </div>
       </div>
 
