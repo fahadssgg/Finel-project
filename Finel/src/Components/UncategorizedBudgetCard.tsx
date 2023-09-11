@@ -1,7 +1,7 @@
-import Card from "./Card";
+// import Card from "./Card";
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetCont";
 
-export default function UncategorizedBudgetCard(props: any) {
+export default function UncategorizedBudgetCard() {
   const { getBudgetExpenses }: any = useBudgets();
   const money = getBudgetExpenses(UNCATEGORIZED_BUDGET_ID).reduce(
     (total: number, expense: any) => total + expense.amount,
@@ -9,5 +9,5 @@ export default function UncategorizedBudgetCard(props: any) {
   );
   if (money == 0) return null;
 
-  return <Card name="Uncategorized" money={money} {...props} />;
+  return;
 }
