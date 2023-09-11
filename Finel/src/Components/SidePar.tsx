@@ -16,14 +16,14 @@ export default function SidePar() {
         <nav className="mt-5 ml-4 px-2 ">
           <a
             href="/"
-            className="group flex items-center px-2 py-2 text-base leading-6 font-semibold   hover:bg-black/10"
+            className="group flex items-center px-2 py-2 text-base leading-6    hover:bg-black/10"
           >
             <img className="mr-3" src={home} />
             Home
           </a>
           <a
             href="/Overview"
-            className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
+            className="mt-1 group flex items-center px-2 py-2 text-base leading-6   hover:bg-black/10"
           >
             <img className="mr-3 w-5" src={Salary} />
             Salary
@@ -31,7 +31,7 @@ export default function SidePar() {
 
           <a
             href="/InfoPage"
-            className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
+            className="mt-1 group flex items-center px-2 py-2 text-base leading-6   hover:bg-black/10"
           >
             <img className="mr-3" src={overview} />
             Overview
@@ -39,7 +39,7 @@ export default function SidePar() {
 
           <a
             href="/InfoPage2"
-            className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
+            className="mt-1 group flex items-center px-2 py-2 text-base leading-6  hover:bg-black/10"
           >
             <img className="mr-3" src={Report} />
             Budget
@@ -47,14 +47,14 @@ export default function SidePar() {
 
           <a
             href="/Profile"
-            className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium   hover:bg-black/10"
+            className="mt-1 group flex items-center px-2 py-2 text-base leading-6   hover:bg-black/10"
           >
             <img className="mr-3" src={profile} />
             Profile
           </a>
           <a
             href="/"
-            className="mt-1 text-red-600 group  flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
+            className="mt-1 text-red-600 group  flex items-center px-2 py-2 text-base leading-6   hover:bg-black/10"
             onClick={() => localStorage.removeItem("active")}
           >
             <img className="mr-3" src={Logout} />
