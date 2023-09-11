@@ -17,7 +17,7 @@ export default function Overview() {
           </div>
           <div className=" h-screen col-start-2 col-end-6 ml-4 mb-40">
             <div className="flex">
-              <h1 className="me-auto text-5xl my-10 ml-10">Overview</h1>
+              <h1 className="me-auto text-5xl my-10 ml-10">My Budget?</h1>
             </div>
 
             <div className="flex justify-center ">

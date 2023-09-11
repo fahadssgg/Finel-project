@@ -21,19 +21,19 @@ export default function SidePar() {
             Home
           </a>
           <a
+            href="/Overview"
+            className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
+          >
+            <img className="mr-3" src={overview} />
+            Budget
+          </a>
+
+          <a
             href="/InfoPage"
             className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
           >
             <img className="mr-3" src={overview} />
             Overview
-          </a>
-
-          <a
-            href="/Overview"
-            className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
-          >
-            <img className="mr-3" src={overview} />
-            Overview2
           </a>
 
           <a

@@ -85,7 +85,7 @@ export default function Profile() {
 
           <div className=" h-screen col-start-2 col-end-6 overflow-auto">
             <h1 className="text-5xl my-10 ml-10">Profile</h1>
-            <div className="flex flex-col justify-center gap-14 items-center h-auto">
+            <div className="flex flex-col justify-center gap-14 items-center h-auto mt-24">
               <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-center">
                 <label>Change Name</label>
                 <div>

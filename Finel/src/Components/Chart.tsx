@@ -24,27 +24,12 @@ export default function Chart() {
   ];
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Socail Media Users</h1>
-      <div className="App">
-        <PieChart width={400} height={400}>
-          <Pie
-            dataKey="users"
-            isAnimationActive={false}
-            data={data}
-            cx={200}
-            cy={200}
-            outerRadius={80}
-            fill="#8884d8"
-            label
-          />
-          <Tooltip />
-        </PieChart>
-      </div>
+    <div className="h-60 mr-10"  style={{ textAlign: "center" }}>
 
-      <div>
-        <h1>Salary Charts </h1>
-        <div className="App">
+      <div className=" h-40">
+        <div className="App ">
+        {/* <h1>Salary Chart</h1> */}
+
           <PieChart width={400} height={400}>
             <Pie
               dataKey="value"
@@ -53,7 +38,7 @@ export default function Chart() {
               cx={200}
               cy={200}
               outerRadius={80}
-              fill="#8884d8"
+              fill="#7399db"
               label
             />
             <Tooltip />

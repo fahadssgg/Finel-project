@@ -10,6 +10,8 @@ import AddExpense from "../Components/contexts/AddExpense";
 import UncategorizedBudgetCard from "../Components/UncategorizedBudgetCard";
 import ViewExpense from "../Components/contexts/ViewExpense";
 import TotalCard from "../Components/TotalCard";
+import Chart from "../Components/Chart";
+
 export default function InfoPage() {
   const [Btn, setBtn] = React.useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = React.useState(false);
@@ -38,17 +40,8 @@ export default function InfoPage() {
             <div className="flex flex-row justify-evenly w-[70rem]  ">
             <div className=" w-[35rem]">
             <TotalCard />
-            <div className="flex justify-center ">
-              <button
-                className=" bg-[#3E68AE] hover:bg-[#7399db] focus:ring-4 focus:outline-none lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-bold text-white m-10"
-                onClick={() => {
-                  setBtn(true);
-                }}
-              >
-                Add Budget
-              </button>
-            </div>
-            <div className="h-[17rem] w-[29rem] overflow-auto">
+
+            <div className="h-[23rem] w-[32rem] mt-8 overflow-auto">
             <div 
               style={{
                 display: "grid",
@@ -64,7 +57,7 @@ export default function InfoPage() {
                 );
                 return (
 
-                  <div className="ml-28 w-[20rem] ">
+                  <div className="ml-12 w-[26rem] ">
                  
                   <Card
                     key={budget.id}
@@ -72,24 +65,19 @@ export default function InfoPage() {
                     name={budget.name}
                     money={money}
                     max_money={budget.max}
-                    AddExOnCard={() => openAddExpenseModal(budget.id)}
-                    ViewExpense={() => setViewExpensesModalBudgetId(budget.id)}
-                    hideBtn=""
+                    AddExOnCard={''}
+                    ViewExpense={''}
+                    hideBtn="True"
                   /> </div>
                 );
               })}</div>
-              <UncategorizedBudgetCard
-                AddExOnCard={openAddExpenseModal}
-                ViewExpense={() =>
-                  setViewExpensesModalBudgetId(UncategorizedId)
-                }
-              />
+              
             </div>
 
             </div>
             <div className=" w-[35rem]">
 
-            <div className="mt-4 mx-10 py-20 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
+            <div className="mt-4 mx-10 py-10 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
             
             <div className="flex flex-col justify-center text-center gap-5">
               <p className=" text-gray-500 text-lg">Your Salary</p>
@@ -109,7 +97,9 @@ export default function InfoPage() {
 
             </div>
 
-            <p className="mt-10 mx-16 py-36 bg-white rounded-3xl px-10 text-center"> The Chart </p>
+            <div className="mt-10 mx-16  bg-white rounded-3xl px-10 text-center">
+              <Chart/>
+               </div>
 
             </div>
 
@@ -119,7 +109,7 @@ export default function InfoPage() {
         </div>
         </div>
 
-      <AddBudget show={Btn} handleClose={() => setBtn(false)} />
+      {/* <AddBudget show={Btn} handleClose={() => setBtn(false)} />
       <AddExpense
         show={showAddExpenseModal}
         defaultBudgetId={addExpenseModalBudgetId}
@@ -128,7 +118,7 @@ export default function InfoPage() {
       <ViewExpense
         budgetId={viewExpensesModalBudgetId}
         handleClose={() => setViewExpensesModalBudgetId(undefined)}
-      />
+      /> */}
     </>
   );
 }
