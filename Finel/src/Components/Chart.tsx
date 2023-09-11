@@ -1,9 +1,6 @@
-import React from "react";
-
-import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Tooltip } from "recharts";
 
 export default function Chart() {
-
   const rest: number | null = parseFloat(localStorage.getItem("rest") || "0");
   const saving: number | null = parseFloat(
     localStorage.getItem("saving") || "0"
@@ -13,14 +10,14 @@ export default function Chart() {
     { name: "Saving", value: saving },
   ];
 
-
-
   return (
-    <div className="h-auto bg-white  rounded-3xl"  style={{ textAlign: "center" }}>
-
+    <div
+      className="h-auto bg-white  rounded-3xl"
+      style={{ textAlign: "center" }}
+    >
       <div className=" h-auto">
         <div className="App ">
-        {/* <h1>Salary Chart</h1> */}
+          {/* <h1>Salary Chart</h1> */}
 
           <PieChart width={400} height={400}>
             <Pie
