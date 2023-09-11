@@ -27,6 +27,7 @@ export default function LogIn() {
         if (User) {
           setLoggedIn(true);
           localStorage.setItem("userId", User.id);
+          localStorage.setItem("userName", User.Name);
           nav("/Overview");
         } else {
           seterror("Invalid must be filled");
