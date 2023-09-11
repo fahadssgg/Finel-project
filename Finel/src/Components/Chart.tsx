@@ -9,16 +9,19 @@ import {
 
 export default function Chart() {
 
+  const Rest = localStorage.getItem("rest")
+  const Salary = localStorage.getItem("salary")
+  const Saving = localStorage.getItem("saving")
 
-    const data2 = [
-        {name : "Salary", value: localStorage.getItem("rest")},
-        {name : "Rest", value:  localStorage.getItem("salary") },
-        {name : "Saving", value: localStorage.getItem("saving")},
+  const data2 = [
+        {name : "Salary", value: Salary},
+        {name : "Rest", value:  Rest },
+        {name : "Saving", value: Saving},
 
     ]
 
     const data = [
-        { name: "Facebook", users: 2000000000 },
+        { name: "Facebook", users: {Rest} },
         { name: "Instagram", users: 1500000000 },
         { name: "Twiter", users: 1000000000 },
         { name: "Telegram", users: 500000000 },
