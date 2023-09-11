@@ -17,7 +17,7 @@ export default function Salary() {
       localStorage.setItem("salary", salary.Salary);
       localStorage.setItem("saving", salary.Saving);
 
-      nav("/InfoPage");
+      nav("/Overview");
 
 
 
