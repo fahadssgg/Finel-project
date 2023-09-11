@@ -19,7 +19,7 @@ export default function NavPar() {
           >
             <img src={user} alt="" />
           </li>
-            <li className="lg:mr-10 lg:w-12 sm:mr-20 sm:w-10">
+            <li className="lg:mr-10 lg:w-20 sm:mr-20 sm:w-10">
               <img src={logo} alt="" />
             </li>
         </ul>
@@ -27,7 +27,7 @@ export default function NavPar() {
 
       {(!active || active === "false") && (
         <ul className=" text-white flex justify-between lg:py-4 sm:py-2 text-xl cursor-pointer">
-          <div className="flex ml-20">
+          <div className="flex ml-20 mt-1">
             <li
               className="mr-8  lg:mt-1 sm:mt-0 bg-[#B2E0E0] lg:w-32 lg:h-10 sm:h-9 sm:w-20 rounded-3xl hover:text-[#5c7676] "
               onClick={() => {
@@ -47,7 +47,7 @@ export default function NavPar() {
 
             </li>
           </div>
-          <li className="mr-10 w-12">
+          <li className="mr-10 w-16">
             <img src={logo} alt="" />
           </li>
         </ul>

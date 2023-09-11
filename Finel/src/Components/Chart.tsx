@@ -3,9 +3,7 @@ import React from "react";
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
 
 export default function Chart() {
-  const salary: number | null = parseFloat(
-    localStorage.getItem("salary") || "0"
-  );
+
   const rest: number | null = parseFloat(localStorage.getItem("rest") || "0");
   const saving: number | null = parseFloat(
     localStorage.getItem("saving") || "0"

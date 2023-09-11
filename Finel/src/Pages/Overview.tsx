@@ -17,7 +17,7 @@ export default function Overview() {
           </div>
           <div className=" h-screen col-start-2 col-end-6 ml-4 mb-40">
             <div className="flex">
-              <h1 className="me-auto text-5xl my-10 ml-10">My Budget?</h1>
+              <h1 className="me-auto text-5xl my-10 ml-10">My Salary</h1>
             </div>
 
             <div className="flex justify-center ">
@@ -25,7 +25,7 @@ export default function Overview() {
                 className=" bg-[#3E68AE] hover:bg-[#7399db] focus:ring-4 focus:outline-none lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-bold text-white m-10"
                 onClick={ShowBudget}
               >
-              My Budget
+              Add Salary
               </button>
             </div>
 

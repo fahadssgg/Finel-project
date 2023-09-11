@@ -3,6 +3,7 @@ import profile from "../assets/profile.png";
 import Logout from "../assets/logout.png";
 import Report from "../assets/report.png";
 import home from "../assets/home.png";
+import Salary from "../assets/money.png";
 import WiseWall from "../assets/Grouptest.png";
 
 export default function SidePar() {
@@ -24,8 +25,8 @@ export default function SidePar() {
             href="/Overview"
             className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
           >
-            <img className="mr-3" src={overview} />
-            Budget
+            <img className="mr-3 w-5" src={Salary} />
+            Salary
           </a>
 
           <a
@@ -41,7 +42,7 @@ export default function SidePar() {
             className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
           >
             <img className="mr-3" src={Report} />
-            Report
+            Budget
           </a>
 
           <a
