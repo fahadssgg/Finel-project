@@ -26,6 +26,7 @@ export default function LogIn() {
 
         if (User) {
           setLoggedIn(true);
+          localStorage.setItem("userId", User.id);
           nav("/Salary");
         } else {
           seterror("Invalid must be filled");
