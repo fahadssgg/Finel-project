@@ -38,10 +38,10 @@ export default function TotalCard() {
   }, [max, total]);
   return (
     <div
-      className={`mt-4 mx-10 pb-10 border-4 px-2 py-1 ${classNames.join(" ")}`}
+      className={`mt-4 mx-10 py-10 bg-white rounded-3xl px-10  ${classNames.join(" ")}`}
     >
       <div className="flex justify-between items-baseline ">
-        <h1 className="me-2">Total</h1>
+        <h1 className="me-2 text-xl font-semibold">Rest of Your Salary</h1>
         <div className="flex items-baseline">
           {Currency.format(max)}
           {total && (

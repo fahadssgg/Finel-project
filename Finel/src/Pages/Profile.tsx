@@ -83,7 +83,7 @@ export default function Profile() {
             <SidePar />
           </div>
 
-          <div className=" h-screen col-start-2 col-end-6  overflow-auto">
+          <div className=" h-screen col-start-2 col-end-6 overflow-auto">
             <h1 className="text-6xl font-bold text-center py-20">Profile</h1>
             <div className="flex flex-col justify-center gap-14 items-center h-auto">
               <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-center">

@@ -29,6 +29,14 @@ export default function SidePar() {
           </a>
 
           <a
+            href="/InfoPage2"
+            className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
+          >
+            <img className="mr-3" src={overview} />
+            Overview2
+          </a>
+
+          <a
             href="/Profile"
             className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
           >

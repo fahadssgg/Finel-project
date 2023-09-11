@@ -33,9 +33,9 @@ export default function Card(prop: budg) {
     return "bg-red-600";
   }
   return (
-    <div className={`mt-4 border-4 px-2 py-1 ${classNames.join(" ")}`}>
+    <div className={`mt-4 py-5 bg-white rounded-3xl px-5  ${classNames.join(" ")}`}>
       <div className="flex justify-between items-baseline ">
-        <h1 className="me-2">{prop.name}</h1>
+        <h1 className="me-2 m-2 text-lg">{prop.name}</h1>
         <div className="flex items-baseline">
           {Currency.format(prop.money)}
           {prop.max_money && (
@@ -62,11 +62,11 @@ export default function Card(prop: budg) {
         </div>
       )}
       {!prop.hideBtn && (
-        <div className="my-3 flex justify-end">
-          <button className="border-2 mr-1" onClick={prop.AddExOnCard}>
+        <div className="my-3 flex justify-center">
+          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2 bg-[#3E68AE]" onClick={prop.AddExOnCard}>
             Add Expense
           </button>
-          <button className="border-2 mr-1" onClick={prop.ViewExpense}>
+          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2 bg-[#3E68AE]" onClick={prop.ViewExpense}>
             View Expense
           </button>
         </div>

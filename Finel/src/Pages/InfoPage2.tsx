@@ -25,12 +25,12 @@ export default function InfoPage() {
   }
   return (
     <>
-          <div className="h-[55rem] flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
-      <div className="h-[50rem] w-[90rem] bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">        <div className=" grid grid-cols-5  h-screen">
+          <div className="h-[60rem] flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
+      <div className="h-[55rem] w-[90rem] bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">        <div className=" grid grid-cols-5  h-screen">
           <div className="  h-screen ">
             <SidePar />
           </div>
-          <div className=" h-screen col-start-2 col-end-6 ml-4 mb-40">
+          <div className=" h-screen col-start-2 col-end-6 ml-4">
             <div className="flex">
               <h1 className="me-auto text-5xl my-10 ml-10">Overview</h1>
             </div>
@@ -48,7 +48,7 @@ export default function InfoPage() {
                 Add Budget
               </button>
             </div>
-            <div className="h-[20rem] w-[29rem] overflow-auto">
+            <div className="h-[15rem] w-[29rem] overflow-auto">
             <div 
               style={{
                 display: "grid",
@@ -87,30 +87,8 @@ export default function InfoPage() {
             </div>
 
             </div>
-            <div className=" w-[35rem]">
-
-            <div className="mt-4 mx-10 py-20 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
-            
-            <div className="flex flex-col justify-center text-center gap-5">
-              <p className=" text-gray-500 text-lg">Your Salary</p>
-              <p className=" text-xl font-semibold">{localStorage.getItem("salary")}</p>
-            </div>
-
-            <div className="flex flex-col justify-center text-center gap-5">
-            <p className=" text-gray-500 text-lg">Your Saving Amount</p>
-            <p className=" text-xl font-semibold">{localStorage.getItem("saving")}</p>
-
-            </div>
-
-            <div className="flex flex-col justify-center text-center gap-5">
-            <p className=" text-gray-500 text-lg">Rest of Salary</p>
-            <p className=" text-xl font-semibold">{localStorage.getItem("rest")}</p>
-            </div>
-
-            </div>
-
-            <p className="mt-10 mx-16 py-36 bg-white rounded-3xl px-10 text-center"> The Chart </p>
-
+            <div className="bg-red-800 w-[35rem]">
+                <p>test</p>
             </div>
 
           </div>

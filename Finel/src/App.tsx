@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import InfoPage from "./Pages/InfoPage";
+import InfoPage2 from "./Pages/InfoPage2";
 import Home from "./Pages/Home";
 import Login from "./Hooks/LogIn";
 import Signup from "./Hooks/SignUp";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/SignUp" element={<Signup />}></Route>
         <Route path="/Profile" element={<Profile />}></Route>
         <Route path="/InfoPage" element={<InfoPage />}></Route>
+        <Route path="/InfoPage2" element={<InfoPage2 />}></Route>
         <Route path="/Salary" element={<Salary />}></Route>
         <Route path="/Chart" element={<Chart />}></Route>
 
