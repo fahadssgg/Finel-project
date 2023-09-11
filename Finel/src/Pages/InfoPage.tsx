@@ -25,14 +25,14 @@ export default function InfoPage() {
   }
   return (
     <>
-      <div className="bg-[#d9d9d9] bg-opacity-30  bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-cover">
-        <div className=" grid grid-cols-5  h-screen">
+          <div className="h-[60rem] flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
+      <div className="h-[55rem] w-[90rem] bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">        <div className=" grid grid-cols-5  h-screen">
           <div className="  h-screen ">
             <SidePar />
           </div>
           <div className=" h-screen col-start-2 col-end-6 ml-4 overflow-auto">
             <div className="flex">
-              <h1 className="me-auto text-2xl">Budgets</h1>
+              <h1 className="me-auto text-2xl">Overview</h1>
             </div>
             <TotalCard />
             <div
@@ -80,7 +80,8 @@ export default function InfoPage() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
 
       <AddBudget show={Btn} handleClose={() => setBtn(false)} />
       <AddExpense

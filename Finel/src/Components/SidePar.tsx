@@ -7,7 +7,7 @@ import WiseWall from "../assets/Grouptest.png";
 
 export default function SidePar() {
   return (
-    <div className=" border-r-4  border-t h-screen bg-[#d9d9d9] bg-opacity-30">
+    <div className=" border-r-4  border-t h-screen rounded-l-full bg-[#d9d9d9] bg-opacity-5">
       <div className="  w-full">
         <div className="flex justify-center">
           <img className="h-16 my-10" src={WiseWall} />

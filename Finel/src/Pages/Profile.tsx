@@ -75,14 +75,16 @@ export default function Profile() {
 
   return (
     <>
-      <div className="bg-[#d9d9d9] bg-opacity-30  bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-cover">
+          <div className="h-[60rem] flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
+      <div className="h-[55rem] w-[90rem] bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">
+
         <div className=" grid grid-cols-5  h-screen">
-          <div className="  h-screen ">
+          <div className=" h-screen ">
             <SidePar />
           </div>
 
           <div className=" h-screen col-start-2 col-end-6  overflow-auto">
-            <h1 className="text-6xl font-bold text-center py-14">Profile</h1>
+            <h1 className="text-6xl font-bold text-center py-20">Profile</h1>
             <div className="flex flex-col justify-center gap-14 items-center h-auto">
               <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-center">
                 <label>Change Name</label>
@@ -138,6 +140,8 @@ export default function Profile() {
               </div>
             </div>
           </div>
+        </div>
+      
         </div>
       </div>
     </>
