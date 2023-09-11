@@ -20,12 +20,12 @@ export default function Home() {
       </div>
       <div className="h-fit flex flex-row-reverse lg:gap-20 max-sm:gap-5 md:gap-10 max-lg:gap-10 justify-center">
         <img
-          className="lg:h-[40rem] lg:w-[40rem] max-sm:w-[15rem] md:w-[15rem]"
+          className="lg:h-[40rem] lg:w-[40rem] max-sm:w-[10rem] md:w-[15rem]"
           src={Header2}
           alt=""
         />
         <img
-          className="lg:h-[30rem] lg:w-[40rem] max-sm:w-[15rem] md:w-[15rem] mt-20"
+          className="lg:h-[30rem] lg:w-[40rem] max-sm:w-[10rem] md:w-[15rem] mt-20"
           src={Header1}
           alt=""
         />
@@ -137,11 +137,11 @@ export default function Home() {
             </p>
 
             <div className="flex flex-row justify-center gap-5 mb-12">
-              <a href="">
+              <a href="https://github.com/fahadssgg">
                 {" "}
                 <img className="lg:w-12 max-sm:w-10" src={gitimg} alt="" />{" "}
               </a>
-              <a href="">
+              <a href="https://www.linkedin.com/in/fahad-saad-alghamdi/">
                 {" "}
                 <img
                   className="lg:w-12 max-sm:w-10"

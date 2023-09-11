@@ -13,17 +13,17 @@ export default function NavPar() {
       {active === "true" && (
         <ul className="flex justify-between py-4 cursor-pointer">
           <li
-            className="lg:ml-10 lg:w-9 max-sm:ml-4 max-sm:h-10 max-sm:w-10"
+            className="lg:ml-0 lg:w-9 max-sm:ml-0 max-sm:h-10 max-sm:w-10"
             onClick={() => {
               nav("/Profile");
             }}
           >
-            <div className="flex justify-center gap-4 w-80">
+            <div className="flex justify-start ml-4 gap-4 w-80">
               <img className="w-10 hover:scale-90" src={user} alt="" />
               <p className="text-lg w-40 mt-2">{Name}</p>
             </div>
           </li>
-          <li className="lg:mr-10 lg:w-20 max-sm:mr-4 max-sm:w-12">
+          <li className="lg:mr-5 lg:w-20 max-sm:mr-4 max-sm:w-12">
             <img src={logo} alt="" />
           </li>
         </ul>
