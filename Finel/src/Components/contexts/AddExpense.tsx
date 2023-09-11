@@ -93,7 +93,6 @@ export default function AddExpense({
                   />
                 </div>
                 </div>
-                {/* نشوف له صرفه */}
                 <div className="p-6 hidden" id="budgetId">
                   <label>Budget: </label>
                   <br />

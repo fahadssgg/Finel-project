@@ -12,14 +12,14 @@ export default function NavPar() {
       {active === "true" && (
         <ul className="flex justify-between py-4 cursor-pointer">
           <li
-            className="lg:ml-10 lg:w-9 sm:ml-20 sm:w-8"
+            className="lg:ml-10 lg:mt-2 lg:w-12 sm:ml-20 sm:w-8"
             onClick={() => {
               nav("/Profile");
             }}
           >
             <img src={user} alt="" />
           </li>
-          <li className="lg:mr-10 lg:w-20 sm:mr-20 sm:w-10">
+          <li className="lg:mr-10 lg:w-16 sm:mr-20 sm:w-10">
             <img src={logo} alt="" />
           </li>
         </ul>

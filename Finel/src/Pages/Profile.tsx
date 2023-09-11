@@ -85,12 +85,12 @@ export default function Profile() {
 
           <div className=" h-screen col-start-2 col-end-6 overflow-auto">
             <h1 className="text-5xl my-10 ml-10">Profile</h1>
-            <div className="flex flex-col justify-center gap-14 items-center h-auto mt-24">
-              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-center">
+            <div className="bg-white w-[60rem] py-10 flex flex-col rounded-3xl justify-center gap-14 items-center ml-28 h-auto mt-24">
+              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
                 <label>Change Name</label>
                 <div>
                   <input
-                    className="rounded-2xl text-black p-2 bg-opacity-40 bg-[#B2E0E2]"
+                    className="rounded-2xl text-black p-2 px-10 bg-opacity-40 bg-[#B2E0E2]"
                     placeholder="Enter New Name"
                     value={name}
                     onChange={handleNameChange}
@@ -104,11 +104,11 @@ export default function Profile() {
                   </button>
                 </div>
               </div>
-              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-center">
+              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
                 <label>Change Email</label>
                 <div>
                   <input
-                    className="rounded-2xl text-black p-2 bg-opacity-40 bg-[#B2E0E2]"
+                    className="rounded-2xl text-black px-10 p-2 bg-opacity-40 bg-[#B2E0E2]"
                     placeholder="Enter New Email"
                     value={email}
                     onChange={handleEmailChange}
@@ -121,11 +121,11 @@ export default function Profile() {
                   </button>
                 </div>
               </div>
-              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-center">
-                <label>Change Password</label>
+              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
+                <label >Change Password</label>
                 <div>
                   <input
-                    className="rounded-2xl text-black p-2 bg-opacity-40 bg-[#B2E0E2]"
+                    className="rounded-2xl text-black  px-10 p-2 bg-opacity-40 bg-[#B2E0E2]"
                     placeholder="Enter New Password"
                     value={password}
                     onChange={handlePasswordChange}
