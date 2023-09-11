@@ -18,22 +18,11 @@ export default function ViewExpense({ budgetId, handleClose }: any) {
           className="flex justify-center fixed bg-black/25 top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-screen max-h-full"
         >
           <div className=" relative w-full max-w-2xl max-h-full">
-            <div className="relative bg-white rounded-lg shadow dark:bg-slate-300">
-              <div className="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+            <div className="mt-40 ml-20 h-fit w-[30rem] relative bg-white rounded-lg shadow">
+              <div className="flex p-4  rounded-t ">
+                <h3 className="m-5 text-3xl font-semibold  text-gray-400 ">
                   Expenses - {budget?.name}
-                  {budgetId !== UNCATEGORIZED_BUDGET_ID && (
-                    <button
-                      data-modal-hide="defaultModal"
-                      onClick={() => {
-                        deleteBudget(budget);
-                        handleClose();
-                      }}
-                      className="ml-5 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-                    >
-                      Delete
-                    </button>
-                  )}
+                  
                 </h3>
                 <button
                   onClick={handleClose}
@@ -58,25 +47,43 @@ export default function ViewExpense({ budgetId, handleClose }: any) {
                   </svg>
                   <span className="sr-only">Close modal</span>
                 </button>
+
+                
               </div>
-              <div className="cursor-vertical-text gap-3">
+              <div className="h-[10rem] overflow-auto ">
+              <div className="cursor-vertical-text gap-3 mt-12">
                 {expenses.map((expense: any) => (
                   <div className="flex p-4" key={expense.id}>
-                    <div className="me-auto font-bold">
+                    <div className="me-auto ml-2 text-xl font-bold ">
                       {expense.description}
                     </div>
-                    <div className=" font-medium">
+                    <div className="mt-1 text-sm font-medium">
                       {Currency.format(expense.amount)}
                     </div>
                     <button
                       onClick={() => deleteExpense(expense)}
-                      className="border-2 bg-red-600 ml-1 px-2 text-white border-red-600 rounded-sm"
+                      className="border-2 bg-red-600 ml-5 px-2 pb-1 font-bold text-white border-red-600 rounded-sm"
                     >
                       x
                     </button>
                   </div>
                 ))}
-              </div>
+              </div></div>
+        <div className="flex justify-center items-end my-10">
+              {budgetId !== UNCATEGORIZED_BUDGET_ID && (
+                    <button
+                      data-modal-hide="defaultModal"
+                      onClick={() => {
+                        deleteBudget(budget);
+                        handleClose();
+                      }}
+                      className="ml-5 mb-10 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-3xl text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                    >
+                      Delete
+                    </button>
+                  )}</div>
+                  <p></p>
+
             </div>
           </div>
         </div>

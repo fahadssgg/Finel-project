@@ -8,6 +8,7 @@ import Signup from "./Hooks/SignUp";
 import Profile from "./Pages/Profile";
 import Salary from "./Pages/Salary";
 import Chart from "./Components/Chart";
+import Overview from "./Pages/Overview";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Profile" element={<Profile />}></Route>
         <Route path="/InfoPage" element={<InfoPage />}></Route>
         <Route path="/InfoPage2" element={<InfoPage2 />}></Route>
+        <Route path="/Overview" element={<Overview />}></Route>
         <Route path="/Salary" element={<Salary />}></Route>
         <Route path="/Chart" element={<Chart />}></Route>
 

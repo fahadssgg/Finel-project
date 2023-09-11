@@ -10,7 +10,7 @@ import AddExpense from "../Components/contexts/AddExpense";
 import UncategorizedBudgetCard from "../Components/UncategorizedBudgetCard";
 import ViewExpense from "../Components/contexts/ViewExpense";
 import TotalCard from "../Components/TotalCard";
-export default function InfoPage() {
+export default function InfoPage2() {
   const [Btn, setBtn] = React.useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = React.useState(false);
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] =
@@ -32,11 +32,11 @@ export default function InfoPage() {
           </div>
           <div className=" h-screen col-start-2 col-end-6 ml-4">
             <div className="flex">
-              <h1 className="me-auto text-5xl my-10 ml-10">Overview</h1>
+              <h1 className="me-auto text-5xl my-10 ml-10">Report</h1>
             </div>
 
-            <div className="flex flex-row justify-evenly w-[70rem]  ">
-            <div className=" w-[35rem]">
+            <div className="flex flex-col justify-evenly w-[70rem]  ">
+            <div className="flex flex-col ">
             <TotalCard />
             <div className="flex justify-center ">
               <button
@@ -48,7 +48,7 @@ export default function InfoPage() {
                 Add Budget
               </button>
             </div>
-            <div className="h-[15rem] w-[29rem] overflow-auto">
+            <div className="h-[20rem]  flex flex-col overflow-auto">
             <div 
               style={{
                 display: "grid",
@@ -64,7 +64,7 @@ export default function InfoPage() {
                 );
                 return (
 
-                  <div className="ml-28 w-[20rem] ">
+                  <div className=" w-[20rem] grid-cols-3">
                  
                   <Card
                     key={budget.id}
@@ -87,9 +87,7 @@ export default function InfoPage() {
             </div>
 
             </div>
-            <div className="bg-red-800 w-[35rem]">
-                <p>test</p>
-            </div>
+
 
           </div>
           </div>

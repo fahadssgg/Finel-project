@@ -34,15 +34,15 @@ export default function AddExpense({
           className="flex justify-center fixed bg-black/25 top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-screen max-h-full"
         >
           <div className=" relative w-full max-w-2xl max-h-full">
-            <div className="relative bg-white rounded-lg shadow dark:bg-slate-300">
-              <div className="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+            <div className="mt-40 relative bg-white rounded-lg shadow dark:bg-slate-300">
+              <div className="flex items-start justify-between p-4 rounded-t ">
+                <h3 className="m-5 text-3xl font-semibold ml-60 text-gray-400 ">
                   New Expense
                 </h3>
                 <button
                   onClick={handleClose}
                   type="button"
-                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
                   data-modal-hide="defaultModal"
                 >
                   <svg
@@ -66,30 +66,34 @@ export default function AddExpense({
               <form
                 className="flex flex-col justify-center items-center"
                 onSubmit={handleSubmit}
-              >
-                <div className="p-6 " id="discription">
-                  <label>Discription: </label>
+              ><div className=" flex justify-center gap-10">
+                <div className="p-6 my-10 " id="Discription">
+                  <label className="font-bold text-lg">Discription of expenses: </label>
                   <br />
                   <input
+                  className="mt-5 py-2"
                     ref={descriptionRef}
                     type="text"
-                    placeholder="Discription"
+                    placeholder="EX: food"
                     required
                   />
                 </div>
-                <div className="p-6 " id="money">
-                  <label>money: </label>
+                
+                <div className="p-6 my-10" id="Money">
+                  <label className=" font-bold text-lg">Amount of expenses: </label>
                   <br />
                   <input
+                    className="mt-5 py-2"
                     ref={moneyRef}
                     type="number"
-                    placeholder="money"
+                    placeholder="Ex: 300 "
                     min={0}
                     step={1}
                     required
                   />
                 </div>
-
+                </div>
+                {/* نشوف له صرفه */}
                 <div className="p-6 hidden" id="budgetId">
                   <label>Budget: </label>
                   <br />
@@ -102,11 +106,11 @@ export default function AddExpense({
                   </select>
                 </div>
 
-                <div className="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                <div className="flex items-center p-6 space-x-2 border-gray-200 rounded-b dark:border-gray-600">
                   <button
                     data-modal-hide="defaultModal"
                     type="submit"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="mb-10 text-white bg-[#B2E0E0] hover:bg-[#597878] focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-10 py-3 text-center"
                   >
                     Add
                   </button>

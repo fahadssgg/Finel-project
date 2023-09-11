@@ -63,10 +63,10 @@ export default function Card(prop: budg) {
       )}
       {!prop.hideBtn && (
         <div className="my-3 flex justify-center">
-          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2 bg-[#3E68AE]" onClick={prop.AddExOnCard}>
+          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:bg-[#7399db] focus:ring-4 focus:outline-none " onClick={prop.AddExOnCard}>
             Add Expense
           </button>
-          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2 bg-[#3E68AE]" onClick={prop.ViewExpense}>
+          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:bg-[#7399db] focus:ring-4 focus:outline-none" onClick={prop.ViewExpense}>
             View Expense
           </button>
         </div>

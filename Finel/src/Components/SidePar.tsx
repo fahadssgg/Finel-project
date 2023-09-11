@@ -29,7 +29,7 @@ export default function SidePar() {
           </a>
 
           <a
-            href="/InfoPage2"
+            href="/Overview"
             className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
           >
             <img className="mr-3" src={overview} />
@@ -37,7 +37,7 @@ export default function SidePar() {
           </a>
 
           <a
-            href="/Profile"
+            href="/InfoPage2"
             className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium  hover:bg-black/10"
           >
             <img className="mr-3" src={Report} />

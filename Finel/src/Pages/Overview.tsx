@@ -10,7 +10,7 @@ import AddExpense from "../Components/contexts/AddExpense";
 import UncategorizedBudgetCard from "../Components/UncategorizedBudgetCard";
 import ViewExpense from "../Components/contexts/ViewExpense";
 import TotalCard from "../Components/TotalCard";
-export default function InfoPage() {
+export default function Overview() {
   const [Btn, setBtn] = React.useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = React.useState(false);
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] =
@@ -36,84 +36,33 @@ export default function InfoPage() {
             </div>
 
             <div className="flex flex-row justify-evenly w-[70rem]  ">
-            <div className=" w-[35rem]">
-            <TotalCard />
-            <div className="flex justify-center ">
-              <button
-                className=" bg-[#3E68AE] hover:bg-[#7399db] focus:ring-4 focus:outline-none lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-bold text-white m-10"
-                onClick={() => {
-                  setBtn(true);
-                }}
-              >
-                Add Budget
-              </button>
-            </div>
-            <div className="h-[17rem] w-[29rem] overflow-auto">
-            <div 
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))",
-                gap: "1rem",
-                alignItems: "flex-start",
-              }}
-            >
-              {budgets.map((budget: any) => {
-                const money = getBudgetExpenses(budget.id).reduce(
-                  (total: number, expense: any) => total + expense.amount,
-                  0
-                );
-                return (
-
-                  <div className="ml-28 w-[20rem] ">
-                 
-                  <Card
-                    key={budget.id}
-                    bg=""
-                    name={budget.name}
-                    money={money}
-                    max_money={budget.max}
-                    AddExOnCard={() => openAddExpenseModal(budget.id)}
-                    ViewExpense={() => setViewExpensesModalBudgetId(budget.id)}
-                    hideBtn=""
-                  /> </div>
-                );
-              })}</div>
-              <UncategorizedBudgetCard
-                AddExOnCard={openAddExpenseModal}
-                ViewExpense={() =>
-                  setViewExpensesModalBudgetId(UncategorizedId)
-                }
-              />
-            </div>
-
-            </div>
-            <div className=" w-[35rem]">
-
-            <div className="mt-4 mx-10 py-20 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
-            
+            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10  bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
             <div className="flex flex-col justify-center text-center gap-5">
               <p className=" text-gray-500 text-lg">Your Salary</p>
               <p className=" text-xl font-semibold">{localStorage.getItem("salary")}</p>
             </div>
+            </div>
 
+            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10  bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">            
             <div className="flex flex-col justify-center text-center gap-5">
-            <p className=" text-gray-500 text-lg">Your Saving Amount</p>
-            <p className=" text-xl font-semibold">{localStorage.getItem("saving")}</p>
-
+              <p className=" text-gray-500 text-lg">Your Saving</p>
+              <p className=" text-xl font-semibold">{localStorage.getItem("saving")}</p>
+            </div>
             </div>
 
+            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10  bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">            
             <div className="flex flex-col justify-center text-center gap-5">
-            <p className=" text-gray-500 text-lg">Rest of Salary</p>
-            <p className=" text-xl font-semibold">{localStorage.getItem("rest")}</p>
+              <p className=" text-gray-500 text-lg">Rest of Salary</p>
+              <p className=" text-xl font-semibold">{localStorage.getItem("rest")}</p>
             </div>
-
-            </div>
-
-            <p className="mt-10 mx-16 py-36 bg-white rounded-3xl px-10 text-center"> The Chart </p>
-
             </div>
 
           </div>
+
+          <div className="ml-20 w-[60rem]  h-[25rem] mt-10 mx-10  bg-white rounded-3xl px-10 flex justify-center items-center text-center gap-5">            
+              <p className=" text-gray-500 text-lg">The chart</p>
+            </div>
+
           </div>
         </div>
         </div>
