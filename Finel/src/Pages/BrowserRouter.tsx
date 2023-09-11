@@ -1,14 +1,14 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
-import InfoPage from "../Pages/InfoPage";
-import InfoPage2 from "../Pages/InfoPage2";
+import InfoPage from "./Overview";
+import InfoPage2 from "./Budget";
 import Home from "../Pages/Home";
 import Login from "../Hooks/LogIn";
 import Signup from "../Hooks/SignUp";
 import Profile from "../Pages/Profile";
-import Salary from "../Pages/Salary";
+import Salary from "./SalaryForm";
 import Chart from "../Components/Chart";
-import Overview from "../Pages/Overview";
+import Overview from "./SalaryPage";
 
 export default function 
 

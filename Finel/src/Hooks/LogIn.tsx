@@ -27,6 +27,8 @@ export default function LogIn() {
         if (User) {
           setLoggedIn(true);
           localStorage.setItem("userId", User.id);
+          localStorage.setItem("userName", User.Name);
+          alert("Login successful!");
           nav("/Overview");
         } else {
           seterror("Invalid must be filled");
@@ -44,7 +46,7 @@ export default function LogIn() {
       </div>
       <div className=" ml-20 absolute justify-center items-start h-screen w-1/3 ">
         <div className="mt-32 w-[30rem] h-fit flex flex-col">
-          <p className="text-center text-6xl font-mono text-[#3E68AE] mt-10 mb-5">
+          <p className="text-left text-6xl font-mono text-[#3E68AE] mt-10 mb-10">
             Log In
           </p>
 
@@ -82,14 +84,14 @@ export default function LogIn() {
 
           <div className="flex flex-row justify-evenly mb-20 mt-10">
             <button
-              className=" bg-[#B2E0E0] w-1/3 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
+              className="hover:scale-90 hover:bg-teal-600 bg-[#B2E0E0] w-1/3 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
               onClick={back}
             >
               Back
             </button>
 
             <button
-              className=" bg-[#B2E0E0] w-1/3 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
+              className=" bg-[#B2E0E0] hover:bg-teal-600 hover:scale-90 w-1/3 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
               onClick={LogIn}
             >
               Log in

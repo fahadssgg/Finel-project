@@ -29,18 +29,16 @@ export default function SingUp() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^[a-zA-Z0-9]{4,}$/;
     localStorage.setItem("active", "true");
-    if (inputValue.Name && inputValue.Password && inputValue.email) {
-      if (!emailRegex.test(inputValue.email)) {
-        setEmailerror("Invalid email must be ex: nouf@gmail.com");
-
-        return;
-      }
-
+    if (inputValue.Name != "" && inputValue.Password != "" && inputValue.email!="" ){
+          
+      if(!emailRegex.test(inputValue.email)){
+            setEmailerror("Invalid email must be ex: nouf@gmail.com");
+          }
       if (!passwordRegex.test(inputValue.Password)) {
-        setPaaerror("Invalid password must at least 4 digit");
-        return;
-      }
-      axios
+            setPaaerror("Invalid password must at least 4 digit");
+          }
+      if (emailRegex.test(inputValue.email) && passwordRegex.test(inputValue.Password)){
+        axios
         .post("https://64f3989fedfa0459f6c6b193.mockapi.io/Userinfo", {
           Name: inputValue.Name,
           Password: inputValue.Password,
@@ -58,6 +56,8 @@ export default function SingUp() {
       setEmailerror("");
       setPaaerror("");
       nav("/LogIn");
+      }
+      
     } else {
       seterror("Invalid must be filled");
     }
@@ -123,14 +123,14 @@ export default function SingUp() {
 
           <div className="flex flex-row justify-evenly mb-20 mt-10">
             <button
-              className=" bg-[#B2E0E0] w-1/3 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
+              className="hover:bg-teal-600 hover:scale-90 bg-[#B2E0E0] w-1/4 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
               onClick={back}
             >
               Back
             </button>
 
             <button
-              className=" bg-[#B2E0E0] w-1/3 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
+              className="hover:bg-teal-600 hover:scale-90 bg-[#B2E0E0] w-1/4 h-12 text-white font-bold text-xl py-1 px-5 rounded-3xl"
               onClick={Signup}
             >
               Sign up

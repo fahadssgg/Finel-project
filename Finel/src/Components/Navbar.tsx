@@ -4,6 +4,7 @@ import user from "../Assets/user (1).png";
 
 export default function NavPar() {
   const active = localStorage.getItem("active");
+  const Name = localStorage.getItem("userName");
 
   const nav = useNavigate();
 
@@ -17,7 +18,10 @@ export default function NavPar() {
               nav("/Profile");
             }}
           >
-            <img src={user} alt="" />
+            <div className="flex justify-center gap-4 w-80">
+              <img className="w-10 hover:scale-90" src={user} alt="" />
+              <p className="text-lg w-40 mt-2">{Name}</p>
+            </div>
           </li>
           <li className="lg:mr-10 lg:w-20 max-sm:mr-4 max-sm:w-12">
             <img src={logo} alt="" />
@@ -29,7 +33,7 @@ export default function NavPar() {
         <ul className=" text-white flex justify-between lg:py-4 sm:py-2 text-xl cursor-pointer">
           <div className="flex ml-20 mt-1 max-sm:ml-0">
             <li
-              className="mr-8 max-sm:ml-3 lg:mt-1 max-sm:px-2 bg-[#B2E0E0] lg:w-32 lg:h-10 max-sm:h-9 max-sm:mt-3  rounded-3xl hover:text-[#5c7676] "
+              className="mr-8 hover:scale-90 max-sm:ml-3 lg:mt-1 max-sm:px-2 bg-[#B2E0E0] lg:w-32 lg:h-10 max-sm:h-9 max-sm:mt-3  rounded-3xl hover:text-[#5c7676] "
               onClick={() => {
                 nav("/LogIn");
               }}
@@ -40,7 +44,7 @@ export default function NavPar() {
             </li>
 
             <li
-              className="mr-8 lg:mt-1 max-sm:px-2 bg-[#B2E0E0] lg:w-32 lg:h-10 max-sm:h-9 max-sm:mt-3 rounded-3xl hover:text-[#5c7676] "
+              className="mr-8 hover:scale-90 lg:mt-1 max-sm:px-2 bg-[#B2E0E0] lg:w-32 lg:h-10 max-sm:h-9 max-sm:mt-3 rounded-3xl hover:text-[#5c7676] "
               onClick={() => {
                 nav("/SignUp");
               }}

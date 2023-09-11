@@ -29,7 +29,7 @@ export default function AddBudget({ show, handleClose }: any) {
           <div className=" relative w-full max-w-2xl max-h-full">
             <div className="mt-40 relative bg-white rounded-lg shadow">
               <div className="flex items-start justify-between  p-4 rounded-t">
-                <h3 className="m-5 text-3xl font-semibold ml-60 text-gray-400">
+                <h3 className="m-5 text-3xl font-semibold ml-60 text-gray-400 ">
                   New Budget
                 </h3>
                 <button
@@ -61,22 +61,22 @@ export default function AddBudget({ show, handleClose }: any) {
                 onSubmit={handleSubmit}
               >
                 <div className=" flex justify-center gap-10">
-                <div className="p-6 my-10 " id="name">
+                <div className="p-6 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black " id="name">
                   <label className=" font-bold text-lg">Name of Budget: </label>
                   <br />
                   <input
-                  className="mt-5 py-2"
+                  className="mt-5 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                     ref={nameRef}
                     type="text"
                     placeholder="Ex: house rent"
                     required
                   />
                 </div>
-                <div className="p-6 my-10 " id="max">
+                <div className="p-6 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black " id="max">
                   <label className=" font-bold text-lg">Maximum Spending: </label>
                   <br />
                   <input
-                   className="mt-5 py-2"
+                   className="mt-5 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                     ref={maxRef}
                     type="number"
                     placeholder="Ex: 1000"
@@ -91,7 +91,7 @@ export default function AddBudget({ show, handleClose }: any) {
                   <button
                     data-modal-hide="defaultModal"
                     type="submit"
-                    className="mb-10 text-white bg-[#B2E0E0] hover:bg-[#597878] focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-10 py-3 text-center"
+                    className="mb-10 text-white bg-[#B2E0E0] hover:bg-[#597878] hover:scale-90 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-10 py-3 text-center"
                   >
                     Add
                   </button>

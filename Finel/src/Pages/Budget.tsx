@@ -10,9 +10,7 @@ import AddExpense from "../Components/contexts/AddExpense";
 import UncategorizedBudgetCard from "../Components/UncategorizedBudgetCard";
 import ViewExpense from "../Components/contexts/ViewExpense";
 import TotalCard from "../Components/TotalCard";
-import Chart from "../Components/Chart";
-
-export default function InfoPage() {
+export default function InfoPage2() {
   const [Btn, setBtn] = React.useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = React.useState(false);
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] =
@@ -27,21 +25,30 @@ export default function InfoPage() {
   }
   return (
     <>
-          <div className="h-[55rem] flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
-      <div className="h-[50rem] w-[90rem] bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">        <div className=" grid grid-cols-5  h-screen">
+          <div className="h-[60rem] flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
+      <div className="h-[55rem] w-[90rem] bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">        <div className=" grid grid-cols-5  h-screen">
           <div className="  h-screen ">
             <SidePar />
           </div>
-          <div className=" h-screen col-start-2 col-end-6 ml-4 mb-40">
+          <div className=" h-screen col-start-2 col-end-6 ml-4">
             <div className="flex">
-              <h1 className="me-auto text-5xl my-10 ml-10">Overview</h1>
+              <h1 className="me-auto text-5xl my-10 ml-10">Budget</h1>
             </div>
 
-            <div className="flex flex-row justify-evenly w-[70rem]  ">
-            <div className=" w-[35rem]">
+            <div className="flex flex-col justify-evenly w-[70rem]   ">
+            <div className="flex flex-col ">
             <TotalCard />
-
-            <div className="h-[23rem] w-[32rem] mt-8 overflow-auto">
+            <div className="flex justify-center ">
+              <button
+                className=" bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-light text-white m-10"
+                onClick={() => {
+                  setBtn(true);
+                }}
+              >
+                Add Budget
+              </button>
+            </div>
+            <div className="ml-4 h-[25rem] w-[67rem] bg-white bg-opacity-80 rounded-3xl flex flex-col overflow-auto">
             <div 
               style={{
                 display: "grid",
@@ -57,7 +64,7 @@ export default function InfoPage() {
                 );
                 return (
 
-                  <div className="ml-12 w-[26rem] ">
+                  <div className="ml-4 w-[18rem] grid-cols-3">
                  
                   <Card
                     key={budget.id}
@@ -65,43 +72,22 @@ export default function InfoPage() {
                     name={budget.name}
                     money={money}
                     max_money={budget.max}
-                    AddExOnCard={''}
-                    ViewExpense={''}
-                    hideBtn="True"
+                    AddExOnCard={() => openAddExpenseModal(budget.id)}
+                    ViewExpense={() => setViewExpensesModalBudgetId(budget.id)}
+                    hideBtn=""
                   /> </div>
                 );
               })}</div>
-              
-            </div>
-
-            </div>
-            <div className=" w-[35rem]">
-
-            <div className="mt-4 mx-10 py-10 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
-            
-            <div className="flex flex-col justify-center text-center gap-5">
-              <p className=" text-gray-500 text-lg">Your Salary</p>
-              <p className=" text-xl font-semibold">{localStorage.getItem("salary")}</p>
-            </div>
-
-            <div className="flex flex-col justify-center text-center gap-5">
-            <p className=" text-gray-500 text-lg">Your Saving Amount</p>
-            <p className=" text-xl font-semibold">{localStorage.getItem("saving")}</p>
-
-            </div>
-
-            <div className="flex flex-col justify-center text-center gap-5">
-            <p className=" text-gray-500 text-lg">Rest of Salary</p>
-            <p className=" text-xl font-semibold">{localStorage.getItem("rest")}</p>
+              <UncategorizedBudgetCard
+                AddExOnCard={openAddExpenseModal}
+                ViewExpense={() =>
+                  setViewExpensesModalBudgetId(UncategorizedId)
+                }
+              />
             </div>
 
             </div>
 
-            <div className="mt-10 mx-16  bg-white rounded-3xl  text-center">
-              <Chart/>
-               </div>
-
-            </div>
 
           </div>
           </div>
@@ -109,7 +95,7 @@ export default function InfoPage() {
         </div>
         </div>
 
-      {/* <AddBudget show={Btn} handleClose={() => setBtn(false)} />
+      <AddBudget show={Btn} handleClose={() => setBtn(false)} />
       <AddExpense
         show={showAddExpenseModal}
         defaultBudgetId={addExpenseModalBudgetId}
@@ -118,7 +104,7 @@ export default function InfoPage() {
       <ViewExpense
         budgetId={viewExpensesModalBudgetId}
         handleClose={() => setViewExpensesModalBudgetId(undefined)}
-      /> */}
+      />
     </>
   );
 }
