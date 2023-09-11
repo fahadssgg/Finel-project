@@ -61,7 +61,7 @@ export default function Salary() {
         </div>
 
         </div>
-        <button onClick={Add} className="bg-[#B2E0E0] sm:w-24 sm:h-10 lg:w-40 lg:h-10 sm:rounded-full lg:rounded-3xl mt-20 sm:text-base lg:text-lg font-bold text-white">
+        <button onClick={Add} className="bg-[#B2E0E0] hover:bg-teal-600 hover:scale-90 sm:w-24 sm:h-10 lg:w-40 lg:h-10 sm:rounded-full lg:rounded-3xl mt-20 sm:text-base lg:text-lg font-bold text-white">
           Lets Start
         </button>
 

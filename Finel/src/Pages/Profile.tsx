@@ -12,6 +12,8 @@ export default function Profile() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [successMessageE, setSuccessMessageE] = useState("");
+  const [successMessageP, setSuccessMessageP] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   useEffect(() => {
     // Retrieve user ID from local storage
@@ -52,7 +54,7 @@ export default function Profile() {
       );
 
       if (response.ok) {
-        setSuccessMessage("Name updated successfully!");
+       localStorage.setItem("userName", name);
       } else {
         setErrorMessage("Failed to update name.");
       }
@@ -62,14 +64,18 @@ export default function Profile() {
   };
 
   const handleChangeName = () => {
+    setSuccessMessage("Name updated successfully!");
     updateUserProfile({ name });
   };
 
   const handleChangeEmail = () => {
+    setSuccessMessageE("email updated successfully!");
     updateUserProfile({ email });
+
   };
 
   const handleChangePassword = () => {
+    setSuccessMessageP("Password updated successfully!");
     updateUserProfile({ password });
   };
 
@@ -85,7 +91,7 @@ export default function Profile() {
 
           <div className=" h-screen col-start-2 col-end-6 overflow-auto">
             <h1 className="text-5xl my-10 ml-10">Profile</h1>
-            <div className="bg-white w-[60rem] py-10 flex flex-col rounded-3xl justify-center gap-14 items-center ml-28 h-auto mt-24">
+            <div className="bg-white w-[40rem] py-10 flex flex-col rounded-3xl justify-center gap-10 items-center ml-60 h-auto mt-16">
               <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
                 <label>Change Name</label>
                 <div>
@@ -97,12 +103,14 @@ export default function Profile() {
                     required
                   />
                   <button
-                    className="ml-9 p-2 rounded-2xl bg-[#3E68AE] text-white"
+                    className="ml-9 p-2 hover:scale-110 hover:bg-[#5e81bd] rounded-2xl bg-[#3E68AE] text-white"
                     onClick={handleChangeName}
                   >
                     Change
                   </button>
                 </div>
+               <p className="text-green-700 ml-10">{successMessage}</p>               
+
               </div>
               <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
                 <label>Change Email</label>
@@ -114,12 +122,13 @@ export default function Profile() {
                     onChange={handleEmailChange}
                   />
                   <button
-                    className="ml-9 p-2 rounded-2xl bg-[#3E68AE] text-white"
+                    className="ml-9 p-2 rounded-2xl hover:scale-110 hover:bg-[#5e81bd]  bg-[#3E68AE] text-white"
                     onClick={handleChangeEmail}
                   >
                     Change
                   </button>
                 </div>
+                <p className="text-green-700 ml-10">{successMessageE}</p>
               </div>
               <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
                 <label >Change Password</label>
@@ -131,12 +140,13 @@ export default function Profile() {
                     onChange={handlePasswordChange}
                   />
                   <button
-                    className="ml-9 p-2 rounded-2xl bg-[#3E68AE] text-white"
+                    className="ml-9 p-2 rounded-2xl hover:scale-110 hover:bg-[#5e81bd] bg-[#3E68AE] text-white"
                     onClick={handleChangePassword}
                   >
                     Change
                   </button>
                 </div>
+                <p className="text-green-700 ml-10">{successMessageP}</p>
               </div>
             </div>
           </div>

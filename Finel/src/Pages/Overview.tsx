@@ -38,7 +38,7 @@ export default function InfoPage() {
             </div>
 
             <div className="flex flex-row justify-evenly w-[70rem]  ">
-            <div className=" w-[35rem]">
+            <div className=" w-[35rem] ">
             <TotalCard />
 
             <div className="h-[23rem] w-[32rem] mt-8 overflow-auto">
@@ -57,7 +57,7 @@ export default function InfoPage() {
                 );
                 return (
 
-                  <div className="ml-12 w-[26rem] ">
+                  <div className="ml-16 w-[26rem]">
                  
                   <Card
                     key={budget.id}
@@ -79,25 +79,25 @@ export default function InfoPage() {
 
             <div className="mt-4 mx-10 py-9 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
             
-            <div className="flex flex-col justify-center text-center gap-5">
+            <div className="flex hover:scale-110 flex-col justify-center text-center gap-5">
               <p className=" text-gray-500 text-lg">Your Salary</p>
               <p className=" text-xl font-semibold">{localStorage.getItem("salary")}</p>
             </div>
 
-            <div className="flex flex-col justify-center text-center gap-5">
+            <div className="flex flex-col hover:scale-110 justify-center text-center gap-5">
             <p className=" text-gray-500 text-lg">Your Saving Amount</p>
             <p className=" text-xl font-semibold">{localStorage.getItem("saving")}</p>
 
             </div>
 
-            <div className="flex flex-col justify-center text-center gap-5">
+            <div className="flex flex-col hover:scale-110 justify-center text-center gap-5">
             <p className=" text-gray-500 text-lg">Rest of Salary</p>
             <p className=" text-xl font-semibold">{localStorage.getItem("rest")}</p>
             </div>
 
             </div>
 
-            <div className="mt-10 mx-16  bg-white rounded-3xl  text-center">
+            <div className="mt-10 mx-16  bg-white rounded-3xl text-center">
               <Chart/>
                </div>
 

@@ -67,11 +67,11 @@ export default function AddExpense({
                 className="flex flex-col justify-center items-center"
                 onSubmit={handleSubmit}
               ><div className=" flex justify-center gap-10">
-                <div className="p-6 my-10 " id="Discription">
+                <div className="p-6 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black" id="Discription">
                   <label className="font-bold text-lg">Discription of expenses: </label>
                   <br />
                   <input
-                  className="mt-5 py-2"
+                  className="mt-5 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                     ref={descriptionRef}
                     type="text"
                     placeholder="EX: food"
@@ -79,11 +79,11 @@ export default function AddExpense({
                   />
                 </div>
                 
-                <div className="p-6 my-10" id="Money">
+                <div className="p-6 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black" id="Money">
                   <label className=" font-bold text-lg">Amount of expenses: </label>
                   <br />
                   <input
-                    className="mt-5 py-2"
+                    className="mt-5 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                     ref={moneyRef}
                     type="number"
                     placeholder="Ex: 300 "
@@ -109,7 +109,7 @@ export default function AddExpense({
                   <button
                     data-modal-hide="defaultModal"
                     type="submit"
-                    className="mb-10 text-white bg-[#B2E0E0] hover:bg-[#597878] focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-10 py-3 text-center"
+                    className="mb-10 text-white bg-[#B2E0E0] hover:bg-[#597878] hover:scale-90 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-10 py-3 text-center"
                   >
                     Add
                   </button>

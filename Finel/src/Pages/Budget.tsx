@@ -40,7 +40,7 @@ export default function InfoPage2() {
             <TotalCard />
             <div className="flex justify-center ">
               <button
-                className=" bg-[#3E68AE] lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-light text-white m-10"
+                className=" bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-light text-white m-10"
                 onClick={() => {
                   setBtn(true);
                 }}

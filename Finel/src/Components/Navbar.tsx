@@ -18,7 +18,7 @@ const Name =  localStorage.getItem("userName");
               nav("/Profile");
             }}
           ><div className="flex justify-center gap-4 w-80">
-            <img className="w-10" src={user} alt="" /><p className="text-lg w-40 mt-2">{Name}</p></div>
+            <img className="w-10 hover:scale-90" src={user} alt="" /><p className="text-lg w-40 mt-2">{Name}</p></div>
           </li>
           <li className="lg:mr-16 lg:w-16 sm:mr-20 sm:w-10">
             <img src={logo} alt="" />
@@ -30,7 +30,7 @@ const Name =  localStorage.getItem("userName");
         <ul className=" text-white flex justify-between lg:py-4 sm:py-2 text-xl cursor-pointer">
           <div className="flex ml-20 mt-1">
             <li
-              className="mr-8  lg:mt-1 sm:mt-0 bg-[#B2E0E0] lg:w-32 lg:h-10 sm:h-9 sm:w-20 rounded-3xl hover:text-[#5c7676] "
+              className="mr-8 hover:scale-90 lg:mt-1 sm:mt-0 bg-[#B2E0E0] lg:w-32 lg:h-10 sm:h-9 sm:w-20 rounded-3xl hover:text-[#5c7676] "
               onClick={() => {
                 nav("/LogIn");
               }}
@@ -41,7 +41,7 @@ const Name =  localStorage.getItem("userName");
             </li>
 
             <li
-              className="mr-8 lg:mt-1 sm:mt-0 bg-[#B2E0E0] lg:w-32 lg:h-10 sm:h-9 sm:w-20 rounded-3xl hover:text-[#5c7676] "
+              className="mr-8 hover:scale-90 lg:mt-1 sm:mt-0 bg-[#B2E0E0] lg:w-32 lg:h-10 sm:h-9 sm:w-20 rounded-3xl hover:text-[#5c7676] "
               onClick={() => {
                 nav("/SignUp");
               }}

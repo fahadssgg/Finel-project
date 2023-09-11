@@ -22,21 +22,21 @@ export default function Overview() {
 
 
             <div className="flex flex-row justify-evenly w-[70rem] pt-40 pb-10">
-            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10  bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
+            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10 hover:scale-110 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">
             <div className="flex flex-col justify-center text-center gap-5">
               <p className=" text-gray-500 text-lg">Your Salary</p>
               <p className=" text-xl font-semibold">{localStorage.getItem("salary")}</p>
             </div>
             </div>
 
-            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10  bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">            
+            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10 hover:scale-110 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">            
             <div className="flex flex-col justify-center text-center gap-5">
               <p className=" text-gray-500 text-lg">Your Saving</p>
               <p className=" text-xl font-semibold">{localStorage.getItem("saving")}</p>
             </div>
             </div>
 
-            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10  bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">            
+            <div className=" w-[35rem]  h-[10rem] mt-4 mx-10 hover:scale-110 bg-white rounded-3xl px-10 flex justify-evenly items-center gap-5">            
             <div className="flex flex-col justify-center text-center gap-5">
               <p className=" text-gray-500 text-lg">Rest of Salary</p>
               <p className=" text-xl font-semibold">{localStorage.getItem("rest")}</p>
@@ -47,7 +47,7 @@ export default function Overview() {
 
           <div className="flex justify-center ">
               <button
-                className=" bg-[#3E68AE] hover:bg-[#7399db] focus:ring-4 focus:outline-none lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-bold text-white m-10"
+                className=" bg-[#3E68AE] hover:bg-[#7399db] hover:scale-90 focus:ring-4 focus:outline-none lg:w-40 lg:h-10 lg:rounded-3xl lg:text-lg font-bold text-white m-10"
                 onClick={ShowBudget}
               >
               Add Salary
