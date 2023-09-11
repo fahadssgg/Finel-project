@@ -32,7 +32,7 @@ export default function InfoPage2() {
           </div>
           <div className=" h-screen col-start-2 col-end-6 ml-4">
             <div className="flex">
-              <h1 className="me-auto text-5xl my-10 ml-10">Report</h1>
+              <h1 className="me-auto text-5xl my-10 ml-10">Budget</h1>
             </div>
 
             <div className="flex flex-col justify-evenly w-[70rem]  ">
@@ -48,7 +48,7 @@ export default function InfoPage2() {
                 Add Budget
               </button>
             </div>
-            <div className="h-[20rem]  flex flex-col overflow-auto">
+            <div className="ml-4 h-[25rem] w-[67rem] bg-white bg-opacity-80 rounded-3xl flex flex-col overflow-auto">
             <div 
               style={{
                 display: "grid",
@@ -64,7 +64,7 @@ export default function InfoPage2() {
                 );
                 return (
 
-                  <div className=" w-[20rem] grid-cols-3">
+                  <div className="ml-4 w-[18rem] grid-cols-3">
                  
                   <Card
                     key={budget.id}

@@ -36,7 +36,7 @@ export default function NavPar() {
             >
               <p className=" text-center sm:text-sm mt-2 lg:text-base font-bold">
                 LOG-IN
-              </p>
+              </p> 
             </li>
 
             <li

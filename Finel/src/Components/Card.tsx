@@ -33,7 +33,7 @@ export default function Card(prop: budg) {
     return "bg-red-600";
   }
   return (
-    <div className={`mt-4 py-5 bg-white rounded-3xl px-5  ${classNames.join(" ")}`}>
+    <div className={`mt-4 py-5 bg-white shadow-xl rounded-3xl px-5  ${classNames.join(" ")}`}>
       <div className="flex justify-between items-baseline ">
         <h1 className="me-2 m-2 text-lg">{prop.name}</h1>
         <div className="flex items-baseline">
