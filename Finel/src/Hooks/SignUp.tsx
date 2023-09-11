@@ -70,7 +70,7 @@ export default function SingUp() {
       </div>
       <div className=" ml-20 absolute justify-center items-start h-screen w-1/2">
         <div className="mt-32 w-[40rem] h-fit flex flex-col">
-          <p className="text-center text-6xl font-semibold text-[#3E68AE] mt-10 mb-20">
+          <p className="text-center text-6xl font-mono text-[#3E68AE] mt-10 mb-20">
             Sign-Up
           </p>
 

@@ -10,42 +10,41 @@ export default function NavPar() {
   return (
     <div>
       {active === "true" && (
-        <ul className=" text-white flex justify-between py-4 text-xl cursor-pointer">
+        <ul className="flex justify-between py-4 cursor-pointer">
           <li
-            className="ml-10 w-9"
+            className="lg:ml-10 lg:w-9 sm:ml-20 sm:w-8"
             onClick={() => {
               nav("/Profile");
             }}
           >
             <img src={user} alt="" />
           </li>
-          <div className="flex gap-3">
-            <li className="mr-10 w-12">
+            <li className="lg:mr-10 lg:w-12 sm:mr-20 sm:w-10">
               <img src={logo} alt="" />
             </li>
-          </div>
         </ul>
       )}
 
       {(!active || active === "false") && (
-        <ul className=" text-white flex justify-between py-4 text-xl cursor-pointer">
+        <ul className=" text-white flex justify-between lg:py-4 sm:py-2 text-xl cursor-pointer">
           <div className="flex ml-20">
             <li
-              className="mr-8  mt-1 bg-[#B2E0E0] w-20 h-7 rounded-xl text-center hover:text-[#5c7676] text-base"
+              className="mr-8  lg:mt-1 sm:mt-0 bg-[#B2E0E0] lg:w-32 lg:h-10 sm:h-9 sm:w-20 rounded-3xl hover:text-[#5c7676] "
               onClick={() => {
                 nav("/LogIn");
               }}
             >
-              Log-In
+            <p className=" text-center sm:text-sm mt-2 lg:text-base font-bold">LOG-IN</p>            
             </li>
 
             <li
-              className="mr-8 mt-1 bg-[#B2E0E0] w-20 h-7 rounded-xl text-center hover:text-[#5c7676] text-base"
+              className="mr-8 lg:mt-1 sm:mt-0 bg-[#B2E0E0] lg:w-32 lg:h-10 sm:h-9 sm:w-20 rounded-3xl hover:text-[#5c7676] "
               onClick={() => {
                 nav("/SignUp");
               }}
             >
-              Sign-up
+              <p className=" text-center sm:text-sm mt-2 lg:text-base font-bold">SIGN-UP</p>            
+
             </li>
           </div>
           <li className="mr-10 w-12">

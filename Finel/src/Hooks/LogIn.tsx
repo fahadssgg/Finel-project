@@ -43,7 +43,7 @@ export default function LogIn() {
       </div>
       <div className=" ml-20 absolute justify-center items-start h-screen w-1/3 ">
         <div className="mt-32 w-[30rem] h-fit flex flex-col">
-          <p className="text-center text-6xl font-semibold text-[#3E68AE] mt-10 mb-5">
+          <p className="text-center text-6xl font-mono text-[#3E68AE] mt-10 mb-5">
             Log In
           </p>
 

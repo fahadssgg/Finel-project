@@ -10,11 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "apexcharts": "^3.42.0",
     "axios": "^1.5.0",
+    "igniteui-react-charts": "^18.2.1",
+    "igniteui-react-core": "^18.2.1",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.15.0",
+    "recharts": "^2.8.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
