@@ -11,17 +11,11 @@ export default function Chart() {
     localStorage.getItem("saving") || "0"
   );
   const data2 = [
-    { name: "Salary", value: salary },
     { name: "Rest", value: rest },
     { name: "Saving", value: saving },
   ];
 
-  const data = [
-    { name: "Facebook", users: 2000000000 },
-    { name: "Instagram", users: 1500000000 },
-    { name: "Twiter", users: 1000000000 },
-    { name: "Telegram", users: 500000000 },
-  ];
+
 
   return (
     <div className="h-auto bg-white  rounded-3xl"  style={{ textAlign: "center" }}>
