@@ -19,9 +19,9 @@ export default function NavPar() {
           >
             <img src={user} alt="" />
           </li>
-            <li className="lg:mr-10 lg:w-12 sm:mr-20 sm:w-10">
-              <img src={logo} alt="" />
-            </li>
+          <li className="lg:mr-10 lg:w-12 sm:mr-20 sm:w-10">
+            <img src={logo} alt="" />
+          </li>
         </ul>
       )}
 
@@ -34,7 +34,9 @@ export default function NavPar() {
                 nav("/LogIn");
               }}
             >
-            <p className=" text-center sm:text-sm mt-2 lg:text-base font-bold">LOG-IN</p>            
+              <p className=" text-center sm:text-sm mt-2 lg:text-base font-bold">
+                LOG-IN
+              </p>
             </li>
 
             <li
@@ -43,8 +45,9 @@ export default function NavPar() {
                 nav("/SignUp");
               }}
             >
-              <p className=" text-center sm:text-sm mt-2 lg:text-base font-bold">SIGN-UP</p>            
-
+              <p className=" text-center sm:text-sm mt-2 lg:text-base font-bold">
+                SIGN-UP
+              </p>
             </li>
           </div>
           <li className="mr-10 w-12">
