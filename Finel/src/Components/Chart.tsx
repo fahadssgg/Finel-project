@@ -24,9 +24,9 @@ export default function Chart() {
   ];
 
   return (
-    <div className="h-60 mr-10"  style={{ textAlign: "center" }}>
+    <div className="h-auto bg-white  rounded-3xl"  style={{ textAlign: "center" }}>
 
-      <div className=" h-40">
+      <div className=" h-auto">
         <div className="App ">
         {/* <h1>Salary Chart</h1> */}
 
@@ -37,7 +37,7 @@ export default function Chart() {
               data={data2}
               cx={200}
               cy={200}
-              outerRadius={80}
+              outerRadius={130}
               fill="#7399db"
               label
             />

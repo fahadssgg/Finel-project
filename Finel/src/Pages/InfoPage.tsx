@@ -97,7 +97,7 @@ export default function InfoPage() {
 
             </div>
 
-            <div className="mt-10 mx-16  bg-white rounded-3xl px-10 text-center">
+            <div className="mt-10 mx-16  bg-white rounded-3xl  text-center">
               <Chart/>
                </div>
 
