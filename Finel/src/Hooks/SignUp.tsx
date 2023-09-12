@@ -18,6 +18,7 @@ export default function SingUp() {
     Password: "",
     email: "",
   });
+  const [showAlert, setShowAlert] = React.useState(false);
   const nav = useNavigate();
   localStorage.setItem("active", "false");
 
@@ -57,17 +58,21 @@ export default function SingUp() {
           .catch((err) => {
             console.log(err);
           });
-        alert("Signup successful!");
+
+        setShowAlert(true);
         seterror("");
         setEmailerror("");
         setPaaerror("");
-        nav("/LogIn");
       }
     } else {
       seterror("Invalid must be filled");
     }
   };
 
+  const closeAlert = () => {
+    setShowAlert(false);
+    nav("/LogIn");
+  };
   return (
     <div>
       <div className=" absolute">
@@ -151,6 +156,22 @@ export default function SingUp() {
               Sign up
             </button>
           </div>
+          {showAlert && ( // Show the alert when showAlert is true
+            <div className="fixed inset-0 pt-10 bg-black/50 flex items-center justify-center z-50">
+              <div className="bg-green-500 p-4 mt-3 rounded-lg shadow-lg max-w-xs absolute top-0 left-0 right-0 mx-auto">
+                <h2 className="text-base font-semibold text-white mb-1">
+                  Success
+                </h2>
+                <p className="text-white text-sm">Sing-Up successful!</p>
+                <button
+                  className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded focus:outline-none"
+                  onClick={closeAlert}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
