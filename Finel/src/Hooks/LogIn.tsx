@@ -16,7 +16,6 @@ export default function LogIn() {
   }
 
   const LogIn = () => {
-    localStorage.setItem("active", "true");
     axios
       .get("https://64f3989fedfa0459f6c6b193.mockapi.io/Userinfo")
       .then((res) => {
@@ -39,6 +38,7 @@ export default function LogIn() {
   const closeAlert = () => {
     setShowAlert(false);
     nav("/Overview");
+    localStorage.setItem("active", "true");
   };
 
   const back = () => {
