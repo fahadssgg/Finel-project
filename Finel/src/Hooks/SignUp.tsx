@@ -84,7 +84,7 @@ export default function SingUp() {
       </div>
       <div className=" ml-20 absolute justify-center items-start h-screen w-1/2 max-sm:ml-5 ">
         <div className="mt-32 w-[40rem] h-fit flex flex-col max-sm:w-[20rem]">
-          <p className="text-center text-6xl font-mono text-[#3E68AE] mt-10 mb-20 max-sm:text-5xl max-sm:text-left">
+          <p className="text-left text-6xl  text-[#3E68AE] mt-10 mb-20 max-sm:text-5xl max-sm:text-left">
             Sign-Up
           </p>
 
@@ -130,7 +130,7 @@ export default function SingUp() {
             <input
               type="text"
               placeholder="................................"
-              className="w-full border-none mb-5 ml-2 bg-transparent outline-none placeholder:italic focus:outline-none"
+              className="w-full border-none mb-5 ml-2 bg- v transparent outline-none placeholder:italic focus:outline-none"
               onChange={(e) => {
                 setInputValue({ ...inputValue, Password: e.target.value });
               }}
