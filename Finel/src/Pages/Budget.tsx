@@ -8,6 +8,10 @@ import AddExpense from "../Components/contexts/AddExpense";
 import ViewExpense from "../Components/contexts/ViewExpense";
 import TotalCard from "../Components/TotalCard";
 export default function InfoPage2() {
+  const login = localStorage.getItem("active");
+  if (login != "true") {
+    window.location.href = "/Login";
+  }
   const [Btn, setBtn] = React.useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = React.useState(false);
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] =

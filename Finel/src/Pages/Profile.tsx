@@ -18,6 +18,10 @@ export default function Profile() {
   {
     errorMessage;
   }
+  const login = localStorage.getItem("active");
+  if (login != "true") {
+    window.location.href = "/Login";
+  }
   useEffect(() => {
     // Retrieve user ID from local storage
     const savedUserId = localStorage.getItem("userId");

@@ -7,6 +7,10 @@ import Salary from "../assets/money.png";
 import WiseWall from "../assets/Grouptest.png";
 
 export default function SidePar() {
+  const out = () => {
+    localStorage.removeItem("active");
+    localStorage.removeItem("Islogedin?");
+  };
   return (
     <div className=" border-r-4   h-screen max-sm:h-auto max-sm:border-r-0 max-sm:border-b-4 max-sm:rounded-l-none rounded-l-full bg-[#d9d9d9] bg-opacity-5">
       <div className="  w-full">
@@ -55,7 +59,7 @@ export default function SidePar() {
           <a
             href="/"
             className="mt-1 text-red-600 group  flex items-center px-2 py-2 text-base leading-6 hover:scale-110 hover:bg-black/10"
-            onClick={() => localStorage.removeItem("active")}
+            onClick={out}
           >
             <img className="mr-3 w-5" src={Logout} />
             Sign-Out
