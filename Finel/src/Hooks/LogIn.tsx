@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import background from "../Assets/Background.png";
+
+
 export default function LogIn() {
   localStorage.setItem("active", "false");
 
@@ -28,8 +30,8 @@ export default function LogIn() {
           setLoggedIn(true);
           localStorage.setItem("userId", User.id);
           localStorage.setItem("userName", User.Name);
-          alert("Login successful!");
           nav("/Overview");
+          toast("Login successful!");
         } else {
           seterror("Invalid must be filled");
         }
@@ -99,6 +101,8 @@ export default function LogIn() {
           </div>
         </div>
       </div>
+      <ToastContainer />
+
     </div>
   );
 }
