@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import background from "../Assets/Background.png";
+
+
 export default function LogIn() {
   localStorage.setItem("active", "false");
 
@@ -27,6 +29,8 @@ export default function LogIn() {
           setLoggedIn(true);
           localStorage.setItem("userId", User.id);
           localStorage.setItem("userName", User.Name);
+          // nav("/Overview");
+          // toast("Login successful!");
 
           setShowAlert(true);
         } else {
@@ -55,7 +59,7 @@ export default function LogIn() {
       </div>
       <div className=" ml-20 absolute justify-center items-start h-screen w-1/3 max-sm:ml-5">
         <div className="mt-32 w-[30rem] h-fit flex flex-col max-sm:w-[20rem]">
-          <p className="text-left text-6xl font-mono text-[#3E68AE] mt-10 mb-10 max-sm:mb-20 max-sm:text-5xl max-sm:text-left">
+          <p className="text-left text-6xl  text-[#3E68AE] mt-10 mb-20 max-sm:mb-20 max-sm:text-5xl max-sm:text-left">
             Log In
           </p>
 
@@ -128,6 +132,8 @@ export default function LogIn() {
           )}
         </div>
       </div>
+      {/* <ToastContainer /> */}
+
     </div>
   );
 }
