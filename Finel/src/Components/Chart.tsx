@@ -15,11 +15,11 @@ export default function Chart() {
       className="h-auto bg-white  rounded-3xl"
       style={{ textAlign: "center" }}
     >
-      <div className=" h-auto">
+      <div className=" h-auto ">
         <div className="App ">
           {/* <h1>Salary Chart</h1> */}
 
-          <PieChart width={400} height={400}>
+          <PieChart width={380} height={400}>
             <Pie
               dataKey="value"
               isAnimationActive={false}

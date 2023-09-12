@@ -15,6 +15,9 @@ export default function Profile() {
   const [successMessageE, setSuccessMessageE] = useState("");
   const [successMessageP, setSuccessMessageP] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  {
+    errorMessage;
+  }
   useEffect(() => {
     // Retrieve user ID from local storage
     const savedUserId = localStorage.getItem("userId");
@@ -54,7 +57,7 @@ export default function Profile() {
       );
 
       if (response.ok) {
-       localStorage.setItem("userName", name);
+        localStorage.setItem("userName", name);
       } else {
         setErrorMessage("Failed to update name.");
       }
@@ -71,7 +74,6 @@ export default function Profile() {
   const handleChangeEmail = () => {
     setSuccessMessageE("email updated successfully!");
     updateUserProfile({ email });
-
   };
 
   const handleChangePassword = () => {
@@ -81,77 +83,76 @@ export default function Profile() {
 
   return (
     <>
-          <div className="h-[60rem] flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
-      <div className="h-[55rem] w-[90rem] bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">
+      <div className="h-[60rem] max-sm:h-full flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
+        <div className="h-[55rem] w-[90rem] max-sm:h-[70rem] max-sm:w-screen bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">
+          <div className=" grid grid-cols-5  h-screen max-sm:flex max-sm:flex-col">
+            <div className=" h-screen ">
+              <SidePar />
+            </div>
 
-        <div className=" grid grid-cols-5  h-screen">
-          <div className=" h-screen ">
-            <SidePar />
-          </div>
-
-          <div className=" h-screen col-start-2 col-end-6 overflow-auto">
-            <h1 className="text-5xl my-10 ml-10">Profile</h1>
-            <div className="bg-white w-[40rem] py-10 flex flex-col rounded-3xl justify-center gap-10 items-center ml-60 h-auto mt-16">
-              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
-                <label>Change Name</label>
-                <div>
-                  <input
-                    className="rounded-2xl text-black p-2 px-10 bg-opacity-40 bg-[#B2E0E2]"
-                    placeholder="Enter New Name"
-                    value={name}
-                    onChange={handleNameChange}
-                    required
-                  />
-                  <button
-                    className="ml-9 p-2 hover:scale-110 hover:bg-[#5e81bd] rounded-2xl bg-[#3E68AE] text-white"
-                    onClick={handleChangeName}
-                  >
-                    Change
-                  </button>
+            <div className=" h-screen col-start-2 col-end-6 max-sm:flex max-sm:flex-col  max-sm:items-center ml-4 max-sm:ml-0 ">
+              <h1 className="text-5xl my-10 ml-10 max-sm:ml-0 max-sm:me-0 max-sm:text-center">
+                Profile
+              </h1>
+              <div className="bg-white w-[40rem] py-10 flex flex-col rounded-3xl justify-center gap-10 items-center ml-60 h-auto max-sm:w-11/12 max-sm:ml-0 mt-16">
+                <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl max-sm:pl-4  max-sm:w-full items-start">
+                  <label>Change Name</label>
+                  <div>
+                    <input
+                      className="rounded-2xl text-black p-2 px-10 max-sm:px-4 bg-opacity-40 bg-[#B2E0E2]"
+                      placeholder="Enter New Name"
+                      value={name}
+                      onChange={handleNameChange}
+                      required
+                    />
+                    <button
+                      className="ml-9 p-2 hover:scale-110 hover:bg-[#5e81bd] rounded-2xl bg-[#3E68AE] text-white"
+                      onClick={handleChangeName}
+                    >
+                      Change
+                    </button>
+                  </div>
+                  <p className="text-green-700 ml-10">{successMessage}</p>
                 </div>
-               <p className="text-green-700 ml-10">{successMessage}</p>               
-
-              </div>
-              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
-                <label>Change Email</label>
-                <div>
-                  <input
-                    className="rounded-2xl text-black px-10 p-2 bg-opacity-40 bg-[#B2E0E2]"
-                    placeholder="Enter New Email"
-                    value={email}
-                    onChange={handleEmailChange}
-                  />
-                  <button
-                    className="ml-9 p-2 rounded-2xl hover:scale-110 hover:bg-[#5e81bd]  bg-[#3E68AE] text-white"
-                    onClick={handleChangeEmail}
-                  >
-                    Change
-                  </button>
+                <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl max-sm:pl-4  max-sm:w-full items-start">
+                  <label>Change Email</label>
+                  <div>
+                    <input
+                      className="rounded-2xl text-black px-10 max-sm:px-4 p-2 bg-opacity-40 bg-[#B2E0E2]"
+                      placeholder="Enter New Email"
+                      value={email}
+                      onChange={handleEmailChange}
+                    />
+                    <button
+                      className="ml-9 p-2 rounded-2xl hover:scale-110 hover:bg-[#5e81bd]  bg-[#3E68AE] text-white"
+                      onClick={handleChangeEmail}
+                    >
+                      Change
+                    </button>
+                  </div>
+                  <p className="text-green-700 ml-10">{successMessageE}</p>
                 </div>
-                <p className="text-green-700 ml-10">{successMessageE}</p>
-              </div>
-              <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl items-start">
-                <label >Change Password</label>
-                <div>
-                  <input
-                    className="rounded-2xl text-black  px-10 p-2 bg-opacity-40 bg-[#B2E0E2]"
-                    placeholder="Enter New Password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                  />
-                  <button
-                    className="ml-9 p-2 rounded-2xl hover:scale-110 hover:bg-[#5e81bd] bg-[#3E68AE] text-white"
-                    onClick={handleChangePassword}
-                  >
-                    Change
-                  </button>
+                <div className="bg-white w-96 h-32 flex flex-col justify-center gap-7 rounded-2xl max-sm:pl-4  max-sm:w-full items-start">
+                  <label>Change Password</label>
+                  <div>
+                    <input
+                      className="rounded-2xl text-black  px-10 max-sm:px-4 p-2 bg-opacity-40 bg-[#B2E0E2]"
+                      placeholder="Enter New Password"
+                      value={password}
+                      onChange={handlePasswordChange}
+                    />
+                    <button
+                      className="ml-9 p-2 rounded-2xl hover:scale-110 hover:bg-[#5e81bd] bg-[#3E68AE] text-white"
+                      onClick={handleChangePassword}
+                    >
+                      Change
+                    </button>
+                  </div>
+                  <p className="text-green-700 ml-10">{successMessageP}</p>
                 </div>
-                <p className="text-green-700 ml-10">{successMessageP}</p>
               </div>
             </div>
           </div>
-        </div>
-      
         </div>
       </div>
     </>

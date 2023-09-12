@@ -33,7 +33,11 @@ export default function Card(prop: budg) {
     return "bg-red-600";
   }
   return (
-    <div className={`mt-4 py-5 bg-white shadow-xl rounded-3xl px-5  ${classNames.join(" ")}`}>
+    <div
+      className={`mt-4 py-5 bg-white shadow-xl rounded-3xl px-5  ${classNames.join(
+        " "
+      )}`}
+    >
       <div className="flex justify-between items-baseline ">
         <h1 className="me-2 m-2 text-lg">{prop.name}</h1>
         <div className="flex items-baseline">
@@ -63,10 +67,16 @@ export default function Card(prop: budg) {
       )}
       {!prop.hideBtn && (
         <div className="my-3 flex justify-center">
-          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 focus:outline-none " onClick={prop.AddExOnCard}>
+          <button
+            className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 max-sm:w-4/6 max-sm:p-2 max-sm:mt-10 max-sm:mb-10 max-sm:rounded-3xl focus:outline-none "
+            onClick={prop.AddExOnCard}
+          >
             Add Expense
           </button>
-          <button className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 focus:outline-none" onClick={prop.ViewExpense}>
+          <button
+            className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 max-sm:w-4/6 max-sm:p-2 max-sm:mt-10 max-sm:mb-10 max-sm:rounded-3xl focus:outline-none"
+            onClick={prop.ViewExpense}
+          >
             View Expense
           </button>
         </div>
