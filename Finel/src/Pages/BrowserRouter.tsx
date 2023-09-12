@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import InfoPage from "./Overview";
 import InfoPage2 from "./Budget";
@@ -10,12 +9,10 @@ import Salary from "./SalaryForm";
 import Chart from "../Components/Chart";
 import Overview from "./SalaryPage";
 
-export default function 
-
-() {
+export default function () {
   return (
     <div>
-    <Routes>
+      <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/LogIn" element={<Login />}></Route>
         <Route path="/SignUp" element={<Signup />}></Route>
@@ -25,9 +22,7 @@ export default function
         <Route path="/Overview" element={<Overview />}></Route>
         <Route path="/Salary" element={<Salary />}></Route>
         <Route path="/Chart" element={<Chart />}></Route>
-
       </Routes>
-        
     </div>
-  )
+  );
 }

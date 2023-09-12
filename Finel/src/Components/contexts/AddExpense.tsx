@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useBudgets, UNCATEGORIZED_BUDGET_ID } from "./BudgetCont";
+import { useBudgets } from "./BudgetCont";
 export default function AddExpense({
   show,
   handleClose,
@@ -36,7 +36,7 @@ export default function AddExpense({
           <div className=" relative w-full max-w-2xl max-h-full">
             <div className="mt-40 relative bg-white rounded-lg shadow ">
               <div className="flex items-start justify-between p-4 rounded-t ">
-                <h3 className="m-5 text-3xl font-semibold ml-60 text-gray-400 ">
+                <h3 className="m-5 text-3xl max-sm:text-xl max-sm:ml-0 max-sm:mt-0 font-semibold ml-60 text-gray-400 ">
                   New Expense
                 </h3>
                 <button
@@ -66,32 +66,43 @@ export default function AddExpense({
               <form
                 className="flex flex-col justify-center items-center"
                 onSubmit={handleSubmit}
-              ><div className=" flex justify-center gap-10">
-                <div className="p-6 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black" id="Discription">
-                  <label className="font-bold text-lg">Discription of expenses: </label>
-                  <br />
-                  <input
-                  className="mt-5 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                    ref={descriptionRef}
-                    type="text"
-                    placeholder="EX: food"
-                    required
-                  />
-                </div>
-                
-                <div className="p-6 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black" id="Money">
-                  <label className=" font-bold text-lg">Amount of expenses: </label>
-                  <br />
-                  <input
-                    className="mt-5 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                    ref={moneyRef}
-                    type="number"
-                    placeholder="Ex: 300 "
-                    min={0}
-                    step={1}
-                    required
-                  />
-                </div>
+              >
+                <div className=" flex max-sm:flex-col justify-center gap-10 sm:gap-0">
+                  <div
+                    className="p-6 max-sm:p-0 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black"
+                    id="Discription"
+                  >
+                    <label className="font-bold text-lg">
+                      Discription of expenses:{" "}
+                    </label>
+                    <br />
+                    <input
+                      className="mt-5 max-sm:mt-0 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                      ref={descriptionRef}
+                      type="text"
+                      placeholder="EX: food"
+                      required
+                    />
+                  </div>
+
+                  <div
+                    className="p-6 max-sm:p-0 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black"
+                    id="Money"
+                  >
+                    <label className=" font-bold text-lg">
+                      Amount of expenses:{" "}
+                    </label>
+                    <br />
+                    <input
+                      className="mt-5 max-sm:mt-0 py-2 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                      ref={moneyRef}
+                      type="number"
+                      placeholder="Ex: 300 "
+                      min={0}
+                      step={1}
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="p-6 hidden" id="budgetId">
                   <label>Budget: </label>
