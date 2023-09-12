@@ -2,7 +2,10 @@ import SidePar from "../Components/SidePar";
 import { useNavigate } from "react-router-dom";
 export default function Overview() {
   const nav = useNavigate();
-
+  const login = localStorage.getItem("active");
+  if (login != "true") {
+    window.location.href = "/Login";
+  }
   const ShowBudget = () => {
     nav("/Salary");
   };

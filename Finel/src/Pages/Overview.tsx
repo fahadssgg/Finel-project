@@ -25,6 +25,10 @@ export default function InfoPage() {
   //   setShowAddExpenseModal(true);
   //   setAddExpenseModalBudgetId(budgetId);
   // }
+  const login = localStorage.getItem("active");
+  if (login != "true") {
+    window.location.href = "/Login";
+  }
   return (
     <>
       <div className="h-[55rem] max-sm:h-full flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">

@@ -19,6 +19,10 @@ export default function Salary() {
 
     nav("/Overview");
   };
+  const login = localStorage.getItem("active");
+  if (login != "true") {
+    window.location.href = "/Login";
+  }
   return (
     <div className=" h-screen bg-[#B2E0E0] flex justify-center items-center">
       <div className="lg:h-[45rem] lg:w-[90rem] max-sm:h-auto max-sm:w-[35rem] bg-white justify-center flex flex-col items-center">
