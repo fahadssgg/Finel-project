@@ -92,7 +92,7 @@ export default function InfoPage() {
 
                     <div className="flex flex-col hover:scale-110 justify-center text-center gap-5">
                       <p className=" text-gray-500 text-lg max-sm:text-sm ">
-                        Your Saving Amount
+                         Saving Amount
                       </p>
                       <p className=" text-xl font-semibold">
                         {localStorage.getItem("saving")}

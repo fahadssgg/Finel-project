@@ -31,7 +31,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="bg-[#C0E6E6] flex flex-col justify-center items-center gap-10 mb-10 mt-10 max-sm:mb-5">
+      <div className="bg-[#dff6f6] flex flex-col justify-center items-center gap-10 mb-10 mt-10 max-sm:mb-5">
         <div className="mt-20 flex gap-3 justify-center">
           <h1 className=" lg:text-5xl md:text-3xl max-sm:text-xl font-bold">
             Take Control Of Your

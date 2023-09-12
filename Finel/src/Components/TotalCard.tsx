@@ -44,7 +44,7 @@ export default function TotalCard() {
     >
       <div className="flex justify-between max-sm:text-sm items-baseline ">
         <h1 className="me-2 text-xl max-sm:text-sm font-semibold">
-          Rest of Your Salary
+          Rest of Salary
         </h1>
         <div className="flex items-baseline">
           {Currency.format(max)}

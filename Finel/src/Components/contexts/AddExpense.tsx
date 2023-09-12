@@ -69,11 +69,11 @@ export default function AddExpense({
               >
                 <div className=" flex max-sm:flex-col justify-center gap-10 sm:gap-0">
                   <div
-                    className="p-6 max-sm:p-0 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black"
+                    className="p-6 max-sm:p-0 my-10 mr-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black"
                     id="Discription"
                   >
                     <label className="font-bold text-lg">
-                      Discription of expenses:{" "}
+                    Description of expenses:{" "}
                     </label>
                     <br />
                     <input
