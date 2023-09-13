@@ -25,6 +25,8 @@ Wise-Wallet : <a href="https://wise-wallet.netlify.app/"> https://wise-wallet.ne
 #### AddSalary:
 ![screencapture-127-0-0-1-5173-Salary-2023-09-13-22_38_56](https://github.com/fahadssgg/Finel-project/assets/107389887/ae22da55-7238-48b6-8c78-e01bc2a47dc5)
 #### HomePage:
+![screencapture-wise-wallet-netlify-app-Overview-2023-09-13-23_38_55](https://github.com/fahadssgg/Finel-project/assets/107389887/1cc70c56-d4b3-4a76-99de-8fdf65f21cbd)
+
 #### HomePage:
 #### HomePage:
 
