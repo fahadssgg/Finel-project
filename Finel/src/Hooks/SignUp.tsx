@@ -159,7 +159,7 @@ export default function SingUp() {
           </div>
           {showAlert && ( // Show the alert when showAlert is true
             <div className="fixed inset-0 pt-10 bg-black/50 flex items-center justify-center z-50">
-              <div className="bg-white p-20 text-center mt-40 rounded-lg shadow-lg max-w-xs absolute top-0 left-0 right-0 mx-auto">
+              <div className="bg-white p-20 text-center mt-40 max-sm:mt-20 rounded-lg shadow-lg max-w-xs absolute top-0 left-0 right-0 mx-auto">
                 <img className="w-20 ml-10 mb-6 " src={checkimg} alt="" />
                 <h2 className="text-3xl font-semibold mb-5">Success</h2>
                 <p className="my-10 text-lg text-green-700">

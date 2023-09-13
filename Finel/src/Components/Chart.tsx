@@ -12,7 +12,7 @@ export default function Chart() {
 
   return (
     <div
-      className="h-auto bg-white  rounded-3xl"
+      className="h-auto bg-white rounded-3xl"
       style={{ textAlign: "center" }}
     >
       <div className=" h-auto ">

@@ -39,8 +39,8 @@ export default function AddExpense({
           className="flex justify-center fixed bg-black/25 top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-screen max-h-full"
         >
           <div className=" relative w-full max-w-2xl max-h-full">
-            <div className="mt-40 relative bg-white rounded-lg shadow ">
-              <div className="flex items-start justify-between p-4 rounded-t ">
+            <div className="mt-10 max-sm:mt-10 relative bg-white rounded-lg shadow ">
+              <div className="flex items-start justify-between p-4  rounded-t ">
                 <h3 className="m-5 text-3xl max-sm:text-xl max-sm:ml-0 max-sm:mt-0 font-semibold ml-60 text-gray-400 ">
                   New Expense
                 </h3>

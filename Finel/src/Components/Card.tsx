@@ -68,13 +68,13 @@ export default function Card(prop: budg) {
       {!prop.hideBtn && (
         <div className="my-3 flex justify-center">
           <button
-            className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 max-sm:w-4/6 max-sm:p-2 max-sm:mt-10 max-sm:mb-10 max-sm:rounded-3xl focus:outline-none "
+            className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 max-sm:w-4/6 max-sm:p-2 max-sm:text-[0.7rem]  max-sm:mt-10 max-sm:mb-5 max-sm:rounded-3xl focus:outline-none "
             onClick={prop.AddExOnCard}
           >
             Add Expense
           </button>
           <button
-            className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 max-sm:w-4/6 max-sm:p-2 max-sm:mt-10 max-sm:mb-10 max-sm:rounded-3xl focus:outline-none"
+            className="lg:w-24 lg:h-8 lg:rounded-3xl lg:text-xs mr-1 text-white m-2  bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] focus:ring-4 max-sm:w-4/6 max-sm:p-2 max-sm:text-[0.7rem] max-sm:mt-10 max-sm:mb-5 max-sm:rounded-3xl focus:outline-none"
             onClick={prop.ViewExpense}
           >
             View Expense

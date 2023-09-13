@@ -38,7 +38,7 @@ export default function TotalCard() {
   }, [max, total]);
   return (
     <div
-      className={`mt-4 mx-10 py-5 max-sm:mx-1 bg-white rounded-3xl px-10  ${classNames.join(
+      className={`mt-4 mx-10 py-5 max-sm:mx-5  max-sm:w-[21rem] bg-white rounded-3xl px-10  ${classNames.join(
         " "
       )}`}
     >
@@ -57,7 +57,7 @@ export default function TotalCard() {
       </div>
       {total && (
         <div
-          className={`w-full bg-gray-200 rounded-full h-2.5  overflow-hidden mt-5`}
+          className={`w-full bg-gray-200 rounded-full h-2.5 overflow-hidden mt-5`}
         >
           <div
             className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${progressPar(

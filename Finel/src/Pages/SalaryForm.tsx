@@ -77,14 +77,14 @@ export default function Salary() {
         </div>
         {showAlert && ( // Show the alert when showAlert is true
             <div className="fixed inset-0 pt-10 bg-black/50 flex items-center justify-center z-50">
-              <div className="bg-white p-20 text-center mt-40 rounded-lg shadow-lg w-[30rem] absolute top-0 left-0 right-0 mx-auto">
-                <img className="w-24 ml-[7rem] mb-6 " src={checkimg} alt="" />
+              <div className="bg-white p-20 text-center mt-40 max-sm:mt-10 rounded-lg shadow-lg w-[30rem]  max-sm:w-[20rem] absolute top-0 left-0 right-0 mx-auto">
+                <img className="w-24 ml-[7rem] max-sm:ml-9 mb-6 " src={checkimg} alt="" />
                 <h2 className="text-3xl font-semibold mb-5">
                   Success
                 </h2>
-                <p className="my-12 text-lg text-green-700">Salary and Saving added successfully !!</p>
+                <p className="my-12 text-lg text-green-700">Salary and Saving added successfully </p>
                 <button
-                  className="mt-2 bg-[#B2E0E0] hover:bg-teal-600  text-white font-semibold py-2 px-6 rounded-3xl focus:outline-none"
+                  className="hover:scale-90 mt-2 bg-[#B2E0E0] hover:bg-teal-600  text-white font-semibold py-2 px-6 rounded-3xl focus:outline-none"
                   onClick={closeAlert}
                 >
                   Close

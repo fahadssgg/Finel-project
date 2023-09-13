@@ -36,7 +36,7 @@ export default function InfoPage2() {
             </div>
             <div className=" h-screen col-start-2 col-end-6 ml-4 max-sm:flex max-sm:flex-col max-sm:items-center max-sm:ml-0 ">
               <div className="flex">
-                <h1 className="me-auto text-5xl my-10 ml-10 max-sm:ml-0 max-sm:me-0 max-sm:text-center">
+                <h1 className="me-auto text-5xl  max-sm:text-4xl my-10 ml-10 max-sm:ml-0 max-sm:me-0 max-sm:text-center">
                   Budget
                 </h1>
               </div>
@@ -46,7 +46,7 @@ export default function InfoPage2() {
                   <TotalCard />
                   <div className="flex justify-center ">
                     <button
-                      className=" bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] lg:w-40 lg:h-10 max-sm:text-lg max-sm:w-4/6 max-sm:p-2 max-sm:mt-10 max-sm:mb-10 max-sm:rounded-3xl lg:rounded-3xl lg:text-lg font-light text-white m-10"
+                      className=" bg-[#3E68AE] hover:scale-90 hover:bg-[#7399db] lg:w-40 lg:h-10 max-sm:text-base max-sm:w-2/6 max-sm:p-2 max-sm:mt-10 max-sm:mb-10 max-sm:rounded-3xl lg:rounded-3xl lg:text-lg font-light text-white m-10"
                       onClick={() => {
                         setBtn(true);
                       }}
@@ -54,7 +54,7 @@ export default function InfoPage2() {
                       Add Budget
                     </button>
                   </div>
-                  <div className="ml-4 max-sm:ml-0 h-[25rem] w-[67rem] max-sm:w-full bg-white bg-opacity-80 rounded-3xl flex flex-col overflow-auto">
+                  <div className="ml-4 max-sm:ml-5 h-[25rem] w-[67rem] max-sm:w-[21rem] bg-white bg-opacity-80 rounded-3xl flex flex-col overflow-auto">
                     <div
                       style={{
                         display: "grid",
@@ -71,7 +71,7 @@ export default function InfoPage2() {
                           0
                         );
                         return (
-                          <div className="ml-4 w-[18rem] max-sm:w-[20rem] max-sm:ml-10 max-sm:grid-cols-1 grid-cols-3">
+                          <div className="ml-4 w-[18rem] max-sm:w-[15rem] max-sm:ml-10 max-sm:grid-cols-1 grid-cols-3">
                             <Card
                               key={budget.id}
                               bg=""
