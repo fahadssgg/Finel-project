@@ -4,6 +4,7 @@ import user from "../Assets/user (1).png";
 
 export default function NavPar() {
   const active = localStorage.getItem("active");
+  const name =localStorage.getItem("userName");
 
   const nav = useNavigate();
 
@@ -12,12 +13,13 @@ export default function NavPar() {
       {active === "true" && (
         <ul className="flex justify-between py-4 cursor-pointer">
           <li
-            className="lg:ml-10 lg:w-9 max-sm:ml-4 max-sm:h-10 max-sm:w-10"
+            className="lg:ml-10 lg:w-60 lg:h-10 max-sm:ml-4 max-sm:h-10 max-sm:w-60 flex max-sm:gap-3 lg:gap-6 "
             onClick={() => {
               nav("/Overview");
             }}
           >
-            <img src={user} alt="" />
+            <img className="w-12 max-sm:w-9" src={user} alt="" />
+            <p className=" mt-1 text-lg">{name}</p>
           </li>
           <li className="lg:mr-10 lg:w-20 max-sm:mr-4 max-sm:w-12">
             <img src={logo} alt="" />

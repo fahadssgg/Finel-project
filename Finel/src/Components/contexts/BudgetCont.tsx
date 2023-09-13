@@ -1,8 +1,10 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import UseLocalSrorage from "./UseLocalSrorage";
+
 const BudgetCont = React.createContext({});
 export function useBudgets() {
+  
   return React.useContext(BudgetCont);
 }
 
@@ -21,6 +23,7 @@ export const UNCATEGORIZED_BUDGET_ID = "Uncategorized";
 // }
 
 export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
+  
   const [budgets, setBudgets] = UseLocalSrorage("budgets", []);
   const [expenses, setExpenses] = UseLocalSrorage("expenses", []);
   function getBudgetExpenses(budgetId: any) {
@@ -59,6 +62,7 @@ export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
+    <div className="">
     <BudgetCont.Provider
       value={{
         budgets,
@@ -72,5 +76,7 @@ export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
     >
       {children}
     </BudgetCont.Provider>
+
+    </div>
   );
 };

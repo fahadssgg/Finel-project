@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import image5 from "../Assets/image_processing20210903-16890-gqy7t.gif";
+import checkimg from "../Assets/giphy (1).gif"
 
 
 interface Info {
@@ -12,15 +13,21 @@ export default function Salary() {
     Salary: "",
     Saving: "",
   });
+  const [showAlert, setShowAlert] = React.useState(false);
   const nav = useNavigate();
   const Add = () => {
     const sum: any = salary.Salary - salary.Saving;
     localStorage.setItem("rest", sum);
     localStorage.setItem("salary", salary.Salary);
     localStorage.setItem("saving", salary.Saving);
+    setShowAlert(true);
+  };
 
+  const closeAlert = () => {
+    setShowAlert(false);
     nav("/Overview");
   };
+
   const login = localStorage.getItem("active");
   if (login != "true") {
     window.location.href = "/Login";
@@ -68,6 +75,23 @@ export default function Salary() {
           Lets Start
         </button>
         </div>
+        {showAlert && ( // Show the alert when showAlert is true
+            <div className="fixed inset-0 pt-10 bg-black/50 flex items-center justify-center z-50">
+              <div className="bg-white p-20 text-center mt-40 rounded-lg shadow-lg w-[30rem] absolute top-0 left-0 right-0 mx-auto">
+                <img className="w-24 ml-[7rem] mb-6 " src={checkimg} alt="" />
+                <h2 className="text-3xl font-semibold mb-5">
+                  Success
+                </h2>
+                <p className="my-12 text-lg text-green-700">Salary and Saving added successfully !!</p>
+                <button
+                  className="mt-2 bg-[#B2E0E0] hover:bg-teal-600  text-white font-semibold py-2 px-6 rounded-3xl focus:outline-none"
+                  onClick={closeAlert}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
     </div>
   );
 }

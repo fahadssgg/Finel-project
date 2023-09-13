@@ -7,6 +7,8 @@ import AddExpense from "../Components/contexts/AddExpense";
 // import UncategorizedBudgetCard from "../Components/UncategorizedBudgetCard";
 import ViewExpense from "../Components/contexts/ViewExpense";
 import TotalCard from "../Components/TotalCard";
+
+
 export default function InfoPage2() {
   const login = localStorage.getItem("active");
   if (login != "true") {
@@ -52,6 +54,7 @@ export default function InfoPage2() {
                     >
                       Add Budget
                     </button>
+
                   </div>
                   <div className="ml-4 max-sm:ml-0 h-[25rem] w-[67rem] max-sm:w-full bg-white bg-opacity-80 rounded-3xl flex flex-col overflow-auto">
                     <div

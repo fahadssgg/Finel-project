@@ -1,14 +1,27 @@
 import { useRef } from "react";
 import { useBudgets } from "./BudgetCont";
+import Swal from "sweetalert2";
 
 
 export default function AddBudget({ show, handleClose }: any) {
+
   const nameRef = useRef<HTMLInputElement | null>(null);
   const maxRef = useRef<HTMLInputElement | null>(null);
   const { addBudget }: any = useBudgets();
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (nameRef.current && maxRef.current) {
+    Swal.fire({
+      title: 'Are you sure you want to add a budget?',
+      showCancelButton: true,
+      confirmButtonColor: '#9BE8D8',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: ' Yes',
+      cancelButtonText: 'No',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if (nameRef.current && maxRef.current) {
+
       const name = nameRef.current.value;
       const max = parseFloat(maxRef.current.value);
 
@@ -17,11 +30,18 @@ export default function AddBudget({ show, handleClose }: any) {
       // Clear the input fields
       nameRef.current.value = "";
       maxRef.current.value = "";
+          handleClose( );
+
+        }
+
     }
 
-    handleClose();
+  })
+      
+
 
   }
+
   return (
     <>
       {show && (
@@ -64,7 +84,7 @@ export default function AddBudget({ show, handleClose }: any) {
                 className="flex flex-col justify-center items-center"
                 onSubmit={handleSubmit}
               >
-                
+
                 <div className=" flex max-sm:flex-col justify-center gap-10 max-sm:gap-0">
                   <div
                     className="p-6 max-sm:p-0 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black "
@@ -110,8 +130,11 @@ export default function AddBudget({ show, handleClose }: any) {
                   >
                     Add
                   </button>
+                  
                 </div>
+                
               </form>
+              
             </div>
           </div>
         </div>
