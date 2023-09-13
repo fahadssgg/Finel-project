@@ -14,7 +14,7 @@ export default function NavPar() {
           <li
             className="lg:ml-10 lg:w-9 max-sm:ml-4 max-sm:h-10 max-sm:w-10"
             onClick={() => {
-              nav("/Profile");
+              nav("/Overview");
             }}
           >
             <img src={user} alt="" />
