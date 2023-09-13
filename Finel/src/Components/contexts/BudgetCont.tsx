@@ -47,8 +47,8 @@ export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
     Swal.fire({
       title: "Are you sure you want to delete a budget?",
       showCancelButton: true,
-      confirmButtonColor: "#3E68AE",
-      cancelButtonColor: "#be4141",
+      confirmButtonColor: "#be4141",
+      cancelButtonColor: "#3E68AE",
       confirmButtonText: " Yes",
       cancelButtonText: "No",
     }).then((result) => {
@@ -71,8 +71,8 @@ export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
     Swal.fire({
       title: "Are you sure you want to delete?",
       showCancelButton: true,
-      confirmButtonColor: "#3E68AE",
-      cancelButtonColor: "#be4141",
+      confirmButtonColor: "#be4141",
+      cancelButtonColor: "#3E68AE",
       confirmButtonText: " Yes",
       cancelButtonText: "No",
     }).then((result) => {
