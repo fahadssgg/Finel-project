@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 
 const BudgetCont = React.createContext({});
 export function useBudgets() {
-  
   return React.useContext(BudgetCont);
 }
 
@@ -24,7 +23,6 @@ export const UNCATEGORIZED_BUDGET_ID = "Uncategorized";
 // }
 
 export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
-  
   const [budgets, setBudgets] = UseLocalSrorage("budgets", []);
   const [expenses, setExpenses] = UseLocalSrorage("expenses", []);
   function getBudgetExpenses(budgetId: any) {
@@ -46,51 +44,61 @@ export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
     });
   }
   function deleteBudget({ id }: any) {
-    setExpenses((prevExpenses: any) => {
-      return prevExpenses.map((expense: any) => {
-        if (expense.budgetId !== id) return expense;
-        return { ...expense, budgetId: UNCATEGORIZED_BUDGET_ID };
-      });
-    });
-    setBudgets((prevBudgets: any[]) => {
-      return prevBudgets.filter((budget: { id: string }) => budget.id !== id);
+    Swal.fire({
+      title: "Are you sure you want to delete a budget?",
+      showCancelButton: true,
+      confirmButtonColor: "#3E68AE",
+      cancelButtonColor: "#be4141",
+      confirmButtonText: " Yes",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setExpenses((prevExpenses: any) => {
+          return prevExpenses.map((expense: any) => {
+            if (expense.budgetId !== id) return expense;
+            return { ...expense, budgetId: UNCATEGORIZED_BUDGET_ID };
+          });
+        });
+        setBudgets((prevBudgets: any[]) => {
+          return prevBudgets.filter(
+            (budget: { id: string }) => budget.id !== id
+          );
+        });
+      }
     });
   }
   function deleteExpense({ id }: any) {
     Swal.fire({
-      title: 'Are you sure you want to delete?',
+      title: "Are you sure you want to delete?",
       showCancelButton: true,
-      confirmButtonColor: '#3E68AE',
-      cancelButtonColor: '#be4141',
-      confirmButtonText: ' Yes',
-      cancelButtonText: 'No',
+      confirmButtonColor: "#3E68AE",
+      cancelButtonColor: "#be4141",
+      confirmButtonText: " Yes",
+      cancelButtonText: "No",
     }).then((result) => {
       if (result.isConfirmed) {
         setExpenses((prevExpenses: any) => {
           return prevExpenses.filter((expenses: any) => expenses.id !== id);
         });
-    
       }
-    })
-    
+    });
   }
 
   return (
     <div className="">
-    <BudgetCont.Provider
-      value={{
-        budgets,
-        expenses,
-        getBudgetExpenses,
-        addExpenses,
-        addBudget,
-        deleteBudget,
-        deleteExpense,
-      }}
-    >
-      {children}
-    </BudgetCont.Provider>
-
+      <BudgetCont.Provider
+        value={{
+          budgets,
+          expenses,
+          getBudgetExpenses,
+          addExpenses,
+          addBudget,
+          deleteBudget,
+          deleteExpense,
+        }}
+      >
+        {children}
+      </BudgetCont.Provider>
     </div>
   );
 };
