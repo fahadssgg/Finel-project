@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { useBudgets } from "./BudgetCont";
+
+
 export default function AddBudget({ show, handleClose }: any) {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const maxRef = useRef<HTMLInputElement | null>(null);
@@ -16,7 +18,9 @@ export default function AddBudget({ show, handleClose }: any) {
       nameRef.current.value = "";
       maxRef.current.value = "";
     }
+
     handleClose();
+
   }
   return (
     <>
@@ -60,6 +64,7 @@ export default function AddBudget({ show, handleClose }: any) {
                 className="flex flex-col justify-center items-center"
                 onSubmit={handleSubmit}
               >
+                
                 <div className=" flex max-sm:flex-col justify-center gap-10 max-sm:gap-0">
                   <div
                     className="p-6 max-sm:p-0 my-10 transform border-b-2 bg-transparent  duration-300 focus-within:border-black "
@@ -110,6 +115,7 @@ export default function AddBudget({ show, handleClose }: any) {
             </div>
           </div>
         </div>
+        
       )}
     </>
   );

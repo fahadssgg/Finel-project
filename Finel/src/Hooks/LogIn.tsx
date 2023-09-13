@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import background from "../Assets/Background.png";
-
+import checkimg from "../Assets/giphy (1).gif"
 
 export default function LogIn() {
   localStorage.setItem("active", "false");
@@ -29,9 +29,6 @@ export default function LogIn() {
           setLoggedIn(true);
           localStorage.setItem("userId", User.id);
           localStorage.setItem("userName", User.Name);
-          // nav("/Overview");
-          // toast("Login successful!");
-
           setShowAlert(true);
         } else {
           seterror("Invalid credentials");
@@ -59,7 +56,7 @@ export default function LogIn() {
       </div>
       <div className=" ml-20 absolute justify-center items-start h-screen w-1/3 max-sm:ml-5">
         <div className="mt-32 w-[30rem] h-fit flex flex-col max-sm:w-[20rem]">
-          <p className="text-left text-6xl  text-[#3E68AE] mt-10 mb-20 max-sm:mb-20 max-sm:text-5xl max-sm:text-left">
+          <p className="text-left text-6xl text-[#3E68AE] mt-10 mb-20 max-sm:mb-20 max-sm:text-5xl max-sm:text-left">
             Log In
           </p>
 
@@ -116,13 +113,14 @@ export default function LogIn() {
           </div>
           {showAlert && ( // Show the alert when showAlert is true
             <div className="fixed inset-0 pt-10 bg-black/50 flex items-center justify-center z-50">
-              <div className="bg-green-500 p-4 mt-3 rounded-lg shadow-lg max-w-xs absolute top-0 left-0 right-0 mx-auto">
-                <h2 className="text-base font-semibold text-white mb-1">
+              <div className="bg-white p-20 text-center mt-40 rounded-lg shadow-lg max-w-xs absolute top-0 left-0 right-0 mx-auto">
+                <img className="w-20 ml-10 mb-6 " src={checkimg} alt="" />
+                <h2 className="text-3xl font-semibold mb-5">
                   Success
                 </h2>
-                <p className="text-white text-sm">Login successful!</p>
+                <p className="my-10 text-lg text-green-700">Login successful!</p>
                 <button
-                  className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded focus:outline-none"
+                  className="mt-2 bg-[#B2E0E0] hover:bg-teal-600  text-white font-semibold py-2 px-6 rounded-3xl focus:outline-none"
                   onClick={closeAlert}
                 >
                   Close
@@ -132,7 +130,6 @@ export default function LogIn() {
           )}
         </div>
       </div>
-      {/* <ToastContainer /> */}
 
     </div>
   );

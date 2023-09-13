@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import image5 from "../Assets/image_processing20210903-16890-gqy7t.gif";
+
+
 interface Info {
   Salary: any;
   Saving: any;
@@ -65,7 +67,7 @@ export default function Salary() {
         >
           Lets Start
         </button>
-      </div>
+        </div>
     </div>
   );
 }
