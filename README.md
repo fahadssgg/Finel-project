@@ -13,9 +13,9 @@ Wise Wallet is a website built using React and TypeScript technology that contai
 
 ![Screenshot 2023-09-13 223247](https://github.com/fahadssgg/Finel-project/assets/107389887/4dcc3ef4-d63a-421c-91a3-69d60dabf11a)
 
-### Link From Website:
+### Link Of Website:
 Wise-Wallet : <a href="https://wise-wallet.netlify.app/"> https://wise-wallet.netlify.app/ </a>
-### Imge for Website:
+### Imge From Website:
 #### HomePage:
 ![screencapture-127-0-0-1-5173-2023-09-13-22_18_46](https://github.com/fahadssgg/Finel-project/assets/107389887/e394492d-025b-48f4-8186-df0114c8d909)
 #### SingUp:
