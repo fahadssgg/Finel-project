@@ -8,3 +8,10 @@ Wise Wallet is a website designed to help you make max-smart financial decisions
 
 <a href="https://github.com/fahadssgg">Fahad Alghamdi</a> <br/>                                       
 <a href="https://github.com/noufjafari">Nouf Jafari</a>
+
+### Figma:
+
+
+### Link For Website:
+
+###Imge for Website:
