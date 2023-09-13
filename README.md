@@ -19,4 +19,4 @@ Wise Wallet is a website designed to help you make max-smart financial decisions
 
 
 
-<P style="color:red;">Thank You</P>
+<h1>Thank You</h1>
