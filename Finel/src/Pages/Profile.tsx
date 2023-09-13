@@ -88,7 +88,7 @@ export default function Profile() {
   return (
     <>
       <div className="h-[60rem] max-sm:h-full flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
-        <div className="h-[55rem] w-[90rem] max-sm:h-[70rem] max-sm:w-screen bg-[#d9d9d9] bg-opacity-30 rounded-3xl max-sm:rounded-none ">
+        <div className="h-[55rem] w-[90rem] max-sm:h-[61rem] max-sm:w-screen bg-[#d9d9d9] bg-opacity-30 rounded-3xl max-sm:rounded-none ">
           <div className=" grid grid-cols-5  h-screen max-sm:flex max-sm:flex-col">
             <div className=" h-screen ">
               <SidePar />

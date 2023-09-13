@@ -28,7 +28,7 @@ export default function InfoPage2() {
   return (
     <>
       <div className="h-[60rem] max-sm:h-full flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
-        <div className="h-[55rem] w-[90rem] max-sm:h-[70rem] max-sm:w-screen bg-[#d9d9d9] bg-opacity-30 rounded-3xl max-sm:rounded-none">
+        <div className="h-[55rem] w-[90rem] max-sm:h-[61rem] max-sm:w-screen bg-[#d9d9d9] bg-opacity-30 rounded-3xl max-sm:rounded-none">
           {" "}
           <div className=" grid grid-cols-5 max-sm:flex max-sm:flex-col  h-screen">
             <div className="  h-screen ">
@@ -54,7 +54,7 @@ export default function InfoPage2() {
                       Add Budget
                     </button>
                   </div>
-                  <div className="ml-4 max-sm:ml-5 h-[25rem] w-[67rem] max-sm:w-[21rem] bg-white bg-opacity-80 rounded-3xl flex flex-col overflow-auto">
+                  <div className="ml-4 max-sm:ml-3 h-[25rem] w-[67rem] max-sm:w-[23rem] bg-white bg-opacity-80 rounded-3xl flex flex-col overflow-auto">
                     <div
                       style={{
                         display: "grid",
@@ -71,7 +71,7 @@ export default function InfoPage2() {
                           0
                         );
                         return (
-                          <div className="ml-4 w-[18rem] max-sm:w-[15rem] max-sm:ml-10 max-sm:grid-cols-1 grid-cols-3">
+                          <div className="ml-4 w-[18rem] max-sm:w-[18rem] max-sm:ml-10 max-sm:grid-cols-1 grid-cols-3">
                             <Card
                               key={budget.id}
                               bg=""
