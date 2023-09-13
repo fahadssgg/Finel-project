@@ -32,7 +32,7 @@ export default function InfoPage() {
   return (
     <>
       <div className="h-[55rem] max-sm:h-full flex justify-center items-center bg-[url('https://cdn.discordapp.com/attachments/1145734750921838642/1150502190297907361/Group_86.png')] bg-white bg-cover">
-        <div className="h-[50rem] w-[90rem] max-sm:h-[100rem] max-sm:w-screen bg-[#d9d9d9] bg-opacity-30 rounded-3xl ">
+        <div className="h-[50rem] w-[90rem] max-sm:h-[100rem] max-sm:w-screen bg-[#d9d9d9] bg-opacity-30 rounded-3xl max-sm:rounded-none">
           {" "}
           <div className=" grid grid-cols-5 h-screen max-sm:flex max-sm:flex-col">
             <div className="  h-screen ">
@@ -96,7 +96,7 @@ export default function InfoPage() {
 
                     <div className="flex flex-col hover:scale-110 justify-center text-center gap-5">
                       <p className=" text-gray-500 text-lg max-sm:text-sm ">
-                         Saving Amount
+                        Saving Amount
                       </p>
                       <p className=" text-xl font-semibold">
                         {localStorage.getItem("saving")}
