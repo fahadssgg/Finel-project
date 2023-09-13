@@ -38,7 +38,7 @@ export default function LogIn() {
 
   const closeAlert = () => {
     setShowAlert(false);
-    nav("/Overview");
+    nav("/");
     localStorage.setItem("active", "true");
   };
 
