@@ -134,11 +134,11 @@ export default function Home() {
             </p>
 
             <div className="flex flex-row justify-center gap-5 mb-12">
-              <a href="">
+              <a href="https://github.com/fahadssgg">
                 {" "}
                 <img className="lg:w-12 max-sm:w-10" src={gitimg} alt="" />{" "}
               </a>
-              <a href="">
+              <a href="https://www.linkedin.com/in/fahad-saad-alghamdi/">
                 {" "}
                 <img
                   className="lg:w-12 max-sm:w-10"
