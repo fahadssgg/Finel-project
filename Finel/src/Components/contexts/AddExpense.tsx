@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { useBudgets } from "./BudgetCont";
-import Swal from "sweetalert2";
 
 export default function AddExpense({
   show,
@@ -15,15 +14,6 @@ export default function AddExpense({
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    Swal.fire({
-      title: 'Are you sure you want to add a budget?',
-      showCancelButton: true,
-      confirmButtonColor: '#B2E0E0',
-      cancelButtonColor: '#3E68AE',
-      confirmButtonText: ' Yes',
-      cancelButtonText: 'No',
-    }).then((result) => {
-      if (result.isConfirmed) {
     if (descriptionRef.current && moneyRef.current && budgetIdRef.current) {
       const description = descriptionRef.current.value;
       const money = parseFloat(moneyRef.current.value);
@@ -38,9 +28,8 @@ export default function AddExpense({
       handleClose();
 
     }}
-  })
 
-  }
+  
   return (
     <>
       {show && (
