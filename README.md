@@ -1,19 +1,19 @@
 # Wise-Wallet
 
-## What is Wise Wallet?
+### What is Wise Wallet?
 
 Wise Wallet is a website built using React and TypeScript technology that contains functions and designs to help people make smart financial decisions and manage their money effectively. It provides tips to help you save, manage your budget, and track your expenses.
 
-## Website Developer:
+### Website Developer:
 
 <a href="https://github.com/fahadssgg">Fahad Alghamdi</a> <br/>                                       
 <a href="https://github.com/noufjafari">Nouf Jafari</a>
 
-## Figma:
+### Figma:
 
 ![Screenshot 2023-09-13 223247](https://github.com/fahadssgg/Finel-project/assets/107389887/4dcc3ef4-d63a-421c-91a3-69d60dabf11a)
 
-## Link For Website:
+### Link For Website:
 Wise-Wallet : <a href="https://wise-wallet.netlify.app/"> https://wise-wallet.netlify.app/ </a>
 ### Imge for Website:
 #### HomePage:
