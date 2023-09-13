@@ -16,7 +16,7 @@ Wise Wallet is a website designed to help you make max-smart financial decisions
 
 ### Imge for Website:
 #### HomePage:
-<img src="filesystem:chrome-extension://fdpohaocaechififmbbbbbknoalclacl/persistent/screencapture-127-0-0-1-5173-2023-09-13-22_18_46.png">
+![screencapture-127-0-0-1-5173-2023-09-13-22_18_46](https://github.com/fahadssgg/Finel-project/assets/107389887/e394492d-025b-48f4-8186-df0114c8d909)
 
 
 
