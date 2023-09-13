@@ -6,4 +6,5 @@ Wise Wallet is a website designed to help you make max-smart financial decisions
 
 ### Website Developer:
 
-<a href="https://github.com/fahadssgg">Fahad Alghamdi</a>                                         <a href="https://github.com/noufjafari">Nouf Jafari</a>
+<a href="https://github.com/fahadssgg">Fahad Alghamdi</a>                                        
+<a href="https://github.com/noufjafari">Nouf Jafari</a>
