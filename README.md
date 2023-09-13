@@ -2,7 +2,7 @@
 
 ### What is Wise Wallet?
 
-Wise Wallet is a website designed to help you make max-smart financial decisions and manage your money effectively. It provides tips to help you save, manage your budget, and track your expenses.
+Wise Wallet is a website built using React and TypeScript technology that contains functions and designs to help people make smart financial decisions and manage their money effectively. It provides tips to help you save, manage your budget, and track your expenses.
 
 ### Website Developer:
 
