@@ -18,6 +18,15 @@ Wise Wallet is a website designed to help you make max-smart financial decisions
 ### Imge for Website:
 #### HomePage:
 ![screencapture-127-0-0-1-5173-2023-09-13-22_18_46](https://github.com/fahadssgg/Finel-project/assets/107389887/e394492d-025b-48f4-8186-df0114c8d909)
+#### SingUp:
+![screencapture-127-0-0-1-5173-SignUp-2023-09-13-22_37_00](https://github.com/fahadssgg/Finel-project/assets/107389887/0ce7eb1b-8126-429b-81e1-c4cebdd8ede1)
+#### LogIn:
+![screencapture-127-0-0-1-5173-LogIn-2023-09-13-22_37_22](https://github.com/fahadssgg/Finel-project/assets/107389887/8b232d04-c0c8-4a05-9825-a63101f55baa)
+#### AddSalary:
+![screencapture-127-0-0-1-5173-Salary-2023-09-13-22_38_56](https://github.com/fahadssgg/Finel-project/assets/107389887/ae22da55-7238-48b6-8c78-e01bc2a47dc5)
+#### HomePage:
+#### HomePage:
+#### HomePage:
 
 
 
