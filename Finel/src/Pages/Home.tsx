@@ -106,7 +106,7 @@ export default function Home() {
           </b>
         </p>
 
-        <div className="flex flex-row max-sm:flex-col max-sm:items-center  justify-center w-full lg:gap-9 max-sm:gap-5 mb-10">
+        <div className="flex flex-row max-sm:flex-col max-sm:items-center bg-[#be4141] justify-center w-full lg:gap-9 max-sm:gap-5 mb-10">
           <div className=" flex flex-col justify-center items-center text-center bg-[#3E68AE] max-sm:w-3/6 lg:w-1/6 h-5/6 lg:gap-5 max-sm:gap-1 rounded-3xl">
             <p className="text-white lg:text-3xl max-sm:text-xl w-20 mt-10 mb-10 font-bold">
               Nouf Jafari

@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import UseLocalSrorage from "./UseLocalSrorage";
+import Swal from "sweetalert2";
 
 const BudgetCont = React.createContext({});
 export function useBudgets() {
@@ -56,9 +57,22 @@ export const BudgetProv = ({ children }: { children: React.ReactNode }) => {
     });
   }
   function deleteExpense({ id }: any) {
-    setExpenses((prevExpenses: any) => {
-      return prevExpenses.filter((expenses: any) => expenses.id !== id);
-    });
+    Swal.fire({
+      title: 'Are you sure you want to delete?',
+      showCancelButton: true,
+      confirmButtonColor: '#3E68AE',
+      cancelButtonColor: '#be4141',
+      confirmButtonText: ' Yes',
+      cancelButtonText: 'No',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setExpenses((prevExpenses: any) => {
+          return prevExpenses.filter((expenses: any) => expenses.id !== id);
+        });
+    
+      }
+    })
+    
   }
 
   return (

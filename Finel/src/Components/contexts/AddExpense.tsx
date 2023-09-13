@@ -18,8 +18,8 @@ export default function AddExpense({
     Swal.fire({
       title: 'Are you sure you want to add a budget?',
       showCancelButton: true,
-      confirmButtonColor: '#9BE8D8',
-      cancelButtonColor: '#3085d6',
+      confirmButtonColor: '#B2E0E0',
+      cancelButtonColor: '#3E68AE',
       confirmButtonText: ' Yes',
       cancelButtonText: 'No',
     }).then((result) => {

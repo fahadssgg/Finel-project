@@ -1,14 +1,18 @@
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./BudgetCont";
 import { Currency } from "../Intlinfo";
+
+
 export default function ViewExpense({ budgetId, handleClose }: any) {
-  
+
   const { getBudgetExpenses, budgets, deleteBudget, deleteExpense }: any =
-    useBudgets();
+  useBudgets();
+
   const expenses = getBudgetExpenses(budgetId);
   const budget =
     UNCATEGORIZED_BUDGET_ID === budgetId
       ? { name: "Uncategorized", id: UNCATEGORIZED_BUDGET_ID }
       : budgets.find((b: any) => b.id === budgetId);
+
 
   return (
     <>
