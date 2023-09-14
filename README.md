@@ -4,6 +4,9 @@
 
 Wise Wallet is a website built using React and TypeScript technology that contains functions and designs to help people make smart financial decisions and manage their money effectively. It provides tips to help you save, manage your budget, and track your expenses.
 
+### Tools: 
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+
 ### Website Developer:
 
 <a href="https://github.com/fahadssgg">Fahad Alghamdi</a> <br/>                                       
