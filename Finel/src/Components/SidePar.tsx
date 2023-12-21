@@ -5,7 +5,7 @@ import Report from "../assets/budget.png";
 import home from "../assets/thehome.png";
 import Salary from "../assets/money.png";
 import WiseWall from "../assets/Grouptest.png";
-
+import { Link } from "react-router-dom";
 export default function SidePar() {
   const out = () => {
     localStorage.removeItem("active");
@@ -18,8 +18,8 @@ export default function SidePar() {
           <img className="h-16 my-10 max-sm:my-0 max-sm:mt-4" src={WiseWall} />
         </div>
         <nav className="mt-5 max-sm:mt-0  max-sm:px-0 max-sm:pl-4 px-2 max-sm:flex  ">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="group flex items-center px-2 py-2 text-base max-sm:flex-col max-sm:text-sm leading-6 hover:scale-105 hover:bg-black/10"
           >
             <img
@@ -27,9 +27,9 @@ export default function SidePar() {
               src={home}
             />
             Home
-          </a>
-          <a
-            href="/Overview"
+          </Link>
+          <Link
+            to="/Overview"
             className="mt-1 group flex items-center px-2 max-sm:flex-col py-2 text-base max-sm:text-sm leading-6 hover:scale-105 hover:bg-black/10"
           >
             <img
@@ -37,10 +37,10 @@ export default function SidePar() {
               src={Salary}
             />
             Salary
-          </a>
+          </Link>
 
-          <a
-            href="/InfoPage2"
+          <Link
+            to="/InfoPage2"
             className="mt-1 group max-sm:ml-1 max-sm:flex-col flex items-center px-2 py-2 text-base max-sm:text-sm leading-6 hover:scale-105 hover:bg-black/10"
           >
             <img
@@ -48,10 +48,10 @@ export default function SidePar() {
               src={Report}
             />
             Budget
-          </a>
+          </Link>
 
-          <a
-            href="/InfoPage"
+          <Link
+            to="/InfoPage"
             className="mt-1 group flex max-sm:flex-col items-center px-2 py-2 text-base max-sm:text-sm leading-6 hover:scale-105 hover:bg-black/10"
           >
             <img
@@ -59,10 +59,10 @@ export default function SidePar() {
               src={overview}
             />
             Overview
-          </a>
+          </Link>
 
-          <a
-            href="/Profile"
+          <Link
+            to="/Profile"
             className="mt-1 group flex max-sm:flex-col items-center px-2 py-2 text-base max-sm:text-sm leading-6 hover:scale-105 hover:bg-black/10"
           >
             <img
@@ -70,9 +70,9 @@ export default function SidePar() {
               src={profile}
             />
             Profile
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            to="/"
             className="mt-1 text-red-600 group max-sm:flex-col flex items-center px-2 py-2 max-sm:text-[0.7rem] text-base leading-6 hover:scale-105 hover:bg-black/10"
             onClick={out}
           >
@@ -81,7 +81,7 @@ export default function SidePar() {
               src={Logout}
             />
             Log-Out
-          </a>
+          </Link>
         </nav>
       </div>
     </div>
